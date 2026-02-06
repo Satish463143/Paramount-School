@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* School Website Design System
+   Primary: Deep Navy Blue - trustworthy, academic, disciplined
+   Accent: Soft Crimson Red - warm, cultural, inviting
+   All colors in HSL format
+*/
+
+:root {
+  /* Core Colors from Logo */
+  --color-primary:#1d3a63 ;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e31e24;
+  --color-secondary-foreground: #ffffff;
+
+  /* Text & Surface Colors - Light (Default) */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172a;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-accent: #e31e24;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #0d2b5b;
+
+  /* Component Specific */
+  --color-topbar-bg: #f1f5f9;
+  --color-topbar-text: #1e293b;
+  --color-topbar-icon: #0d2b5b;
+  --color-navbar-bg: #ffffff;
+  --color-navbar-shadow: 0 4px 20px rgba(13, 43, 91, 0.1);
+  --color-navbar-link: #334155;
+  --color-navbar-link-hover: #0d2b5b;
+  --color-navbar-link-active: #e31e24;
+  --color-cta-bg: #e31e24;
+  --color-cta-bg-hover: #c91a20;
+  --color-cta-text: #ffffff;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Text & Surface Colors - Dark */
+  --color-primary: #38bdf8;
+  --color-background: #020617;
+  --color-foreground: #f8fafc;
+  --color-card: #0f172a;
+  --color-card-foreground: #f8fafc;
+  --color-popover: #0f172a;
+  --color-popover-foreground: #f8fafc;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+  --color-accent: #f05454;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #7f1d1d;
+  --color-destructive-foreground: #f8fafc;
+  --color-border: #1e293b;
+  --color-input: #1e293b;
+  --color-ring: #38bdf8;
+
+  /* Component Specific - Dark */
+  --color-topbar-bg: #0f172a;
+  --color-topbar-text: #94a3b8;
+  --color-topbar-icon: #38bdf8;
+  --color-navbar-bg: #020617;
+  --color-navbar-shadow: rgba(0, 0, 0, 0.4);
+  --color-navbar-link: #cbd5e1;
+  --color-navbar-link-hover: #38bdf8;
+  --color-navbar-link-active: #f05454;
+  --color-cta-bg: #f05454;
+  --color-cta-bg-hover: #f16a6a;
+  --color-cta-text: #ffffff;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+  --color-popover: var(--color-popover);
+  --color-popover-foreground: var(--color-popover-foreground);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+  --color-destructive: var(--color-destructive);
+  --color-destructive-foreground: var(--color-destructive-foreground);
+  --color-border: var(--color-border);
+  --color-input: var(--color-input);
+  --color-ring: var(--color-ring);
+
+  --color-topbar-bg: var(--color-topbar-bg);
+  --color-topbar-text: var(--color-topbar-text);
+  --color-topbar-icon: var(--color-topbar-icon);
+  --color-navbar-bg: var(--color-navbar-bg);
+  --color-navbar-shadow: var(--color-navbar-shadow);
+  --color-navbar-link: var(--color-navbar-link);
+  --color-navbar-link-hover: var(--color-navbar-link-hover);
+  --color-navbar-link-active: var(--color-navbar-link-active);
+  --color-cta-bg: var(--color-cta-bg);
+  --color-cta-bg-hover: var(--color-cta-bg-hover);
+  --color-cta-text: var(--color-cta-text);
+
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased transition-colors duration-300;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.4s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
