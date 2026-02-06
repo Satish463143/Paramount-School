@@ -11,6 +11,7 @@ import {
   ArrowUpRight,
   Send
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -161,6 +162,7 @@ const Footer = () => {
             <a href="#" className="hover:text-secondary transition-colors">Terms of Use</a>
             <a href="#" className="hover:text-secondary transition-colors">Cookies</a>
           </div>
+          <p>Design and Developed by <span className="text-secondary"><Link to="https://bhrigutechnology.com" target="_blank">Bhrigu Technology</Link></span></p>
         </div>
       </div>
     </footer>
