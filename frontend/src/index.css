@@ -8,7 +8,7 @@
 
 :root {
   /* Core Colors from Logo */
-  --color-primary:#1d3a63 ;
+  --color-primary: #1d3a63;
   --color-primary-foreground: #ffffff;
   --color-secondary: #e31e24;
   --color-secondary-foreground: #ffffff;
@@ -188,13 +188,23 @@
 }
 
 @keyframes marquee-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .animate-marquee-left {
@@ -208,4 +218,26 @@
 .animate-marquee-left:hover,
 .animate-marquee-right:hover {
   animation-play-state: paused;
+}
+
+/* Custom Swiper Pagination for Banner */
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: white !important;
+  opacity: 0.5 !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  border-radius: 50% !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 35px !important;
+  border-radius: 12px !important;
+  background: #e31e24 !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 15px rgba(227, 30, 36, 0.4);
+}
+
+.swiper-pagination {
+  bottom: 30px !important;
 }

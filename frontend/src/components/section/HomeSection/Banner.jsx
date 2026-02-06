@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import AOS from "aos";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -99,14 +98,7 @@ const Banner = () => {
             </div>
           </SwiperSlide>
         ))}
-
-        {/* Navigation Arrows */}
-        <button className="banner-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 p-3 rounded-full text-white hover:bg-black/50 transition">
-          <ChevronLeft size={28} />
-        </button>
-        <button className="banner-next absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 p-3 rounded-full text-white hover:bg-black/50 transition">
-          <ChevronRight size={28} />
-        </button>
+        
       </Swiper>
     </section>
   );
