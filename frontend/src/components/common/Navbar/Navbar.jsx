@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#about" },
-  { label: "Academics", href: "#academics" },
-  { label: "Admissions", href: "#admissions" },
-  { label: "Facilities", href: "#facilities" },
-  { label: "Events & Notices", href: "#events" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Academics", href: "/academics" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Facilities", href: "/facilities" },
+  { label: "Events & Notices", href: "/events" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 const Navbar = () => {

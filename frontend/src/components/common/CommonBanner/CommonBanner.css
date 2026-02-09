@@ -1,0 +1,38 @@
+@layer utilities {
+    .animate-spin-slow {
+        animation: banner-spin 20s linear infinite;
+    }
+
+    .animate-fade-in-up {
+        animation: banner-fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes banner-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes banner-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom wave shape fill. Using the CSS variable directly as they are Hex variables in index.css */
+.fill-background {
+    fill: var(--color-background);
+}

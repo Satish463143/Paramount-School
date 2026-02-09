@@ -5,6 +5,7 @@ import Home from './pages/HomePage/HomePage'
 import { ThemeProvider } from './components/common/Theme/ThemeProvider'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AboutPage from './pages/AboutPage/AboutPage'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path='about-us' element={<AboutPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
