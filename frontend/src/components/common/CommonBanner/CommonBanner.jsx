@@ -23,8 +23,7 @@ const CommonBanner = ({ title, subtitle,subtitle2, bgImage }) => {
       </div>
       <div className="absolute bottom-10 right-10 text-white/10 animate-bounce duration-[8s] delay-700">
         <GraduationCap size={150} />
-      </div>
-      
+      </div>      
       <div className="absolute top-1/4 right-[15%] w-32 h-32 bg-secondary/20 rounded-full blur-[60px] animate-pulse" />
       <div className="absolute bottom-1/4 left-[15%] w-40 h-40 bg-white/10 rounded-full blur-[60px] animate-pulse delay-1000" />
 
