@@ -23,17 +23,10 @@ const CampusEnvironment = () => {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300">
       {/* Immersive Wide Strip Hero - Redesigned for Breathability */}
-      <div className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1523050853051-f750004987a9?q=80&w=1600&auto=format&fit=crop" 
-            alt="Paramount School Campus Greenery" 
-            className="w-full h-full object-cover"
-          />
-          {/* Light, Airy Overlay - No heavy dark gradients */}
-          <div className="absolute inset-0 bg-white/40 dark:bg-slate-950/60 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-slate-950 via-white/20 dark:via-slate-950/20 to-transparent" />
-        </div>
+      
+
+      {/* Breathable Atmosphere Blocks */}
+      <div className="container mx-auto px-4 md:px-6 py-24 relative">
         <div className="max-w-3xl mb-16 md:mb-20" data-aos="fade-up">
             <div className="flex items-center gap-2 mb-6">
                 <div className="h-[2px] w-12 bg-primary" />
@@ -51,15 +44,6 @@ const CampusEnvironment = () => {
                 Our campus is a carefully curated ecosystem of openness, greenery, and safety—built to let young minds breathe and grow.
             </p>
         </div>
-
-        {/* Decorative Circular Elements for "Airy" feel */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-400/5 rounded-full blur-3xl animate-blob" />
-      </div>
-
-      {/* Breathable Atmosphere Blocks */}
-      <div className="container mx-auto px-4 md:px-6 py-24 relative">
-        {/* Subtle Background Foliage Shape */}
-        <div className="absolute top-20 left-0 -translate-x-1/2 w-96 h-96 bg-emerald-100/30 dark:bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
           {environmentBlocks.map((block, index) => (

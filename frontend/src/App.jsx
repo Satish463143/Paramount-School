@@ -9,6 +9,9 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import AcademicsPage from './pages/AcademicsPage/AcademicsPage'
 import AdmissionPage from './pages/AdmissionPage/AdmissionPage' 
 import FacilitiesPage from './pages/FacilitiesPage/FacilitiesPage'
+import EventsAndNoticePage from './pages/EventsAndNoticePage/EventsAndNoticePage'
+import GalleryPage from './pages/GalleryPage/GalleryPage'
+import ContactPage from './pages/ContactPage/ContactPage'
 
 
 const App = () => {
@@ -26,6 +29,9 @@ const App = () => {
             <Route path='academics' element={<AcademicsPage />} />
             <Route path='admissions' element={<AdmissionPage />} />
             <Route path='facilities' element={<FacilitiesPage />} />
+            <Route path='events-notices' element={<EventsAndNoticePage />} />
+            <Route path='gallery' element={<GalleryPage />} />
+            <Route path='contact-us' element={<ContactPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
