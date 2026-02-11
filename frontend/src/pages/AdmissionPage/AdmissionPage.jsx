@@ -18,7 +18,7 @@ const AdmissionPage = () => {
         <WhoCanApply />
         <AdmissionProcess />
         <RequiredDocuments />
-        <ImportantDates />
+        {/* <ImportantDates /> */}
         <SchoolVisit />
         <ClosingCTA/>
     </div>

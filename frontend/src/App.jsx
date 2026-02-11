@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import AboutPage from './pages/AboutPage/AboutPage'
 import AcademicsPage from './pages/AcademicsPage/AcademicsPage'
 import AdmissionPage from './pages/AdmissionPage/AdmissionPage' 
+import FacilitiesPage from './pages/FacilitiesPage/FacilitiesPage'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
             <Route path='about-us' element={<AboutPage />} />
             <Route path='academics' element={<AcademicsPage />} />
             <Route path='admissions' element={<AdmissionPage />} />
+            <Route path='facilities' element={<FacilitiesPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
