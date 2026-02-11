@@ -7,10 +7,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import AboutPage from './pages/AboutPage/AboutPage'
 import AcademicsPage from './pages/AcademicsPage/AcademicsPage'
+import AdmissionPage from './pages/AdmissionPage/AdmissionPage' 
 
 
 const App = () => {
-
    useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -23,6 +23,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path='about-us' element={<AboutPage />} />
             <Route path='academics' element={<AcademicsPage />} />
+            <Route path='admissions' element={<AdmissionPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

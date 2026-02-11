@@ -15,10 +15,9 @@ const AcademicsPage = () => {
   return (
     <div>
         <CommonBanner
-            title="Academics Overview"
-            subtitle=""
-            subtitle2=""
-            description=""
+            title="Academic Excellence"
+            subtitle="Our academic framework is designed to build strong foundations, foster curiosity, and nurture disciplined, confident learners at every stage of growth."
+            subtitle2="With Purpose"
         />
         <Philosophy />
         <AcademicLevels />
