@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, Clock, Phone, MapPin, ArrowUpRight, Compass } from 'lucide-react';
 
 const contactData = [
+    
   {
     id: 1,
     tag: 'OFFICIAL MAIL',
