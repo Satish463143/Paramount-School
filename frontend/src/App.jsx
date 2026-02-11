@@ -6,6 +6,7 @@ import { ThemeProvider } from './components/common/Theme/ThemeProvider'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AboutPage from './pages/AboutPage/AboutPage'
+import AcademicsPage from './pages/AcademicsPage/AcademicsPage'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
             <Route path='about-us' element={<AboutPage />} />
+            <Route path='academics' element={<AcademicsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
