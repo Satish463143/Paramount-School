@@ -11,8 +11,7 @@ const BUCKET = process.env.S3_BUCKET_NAME;
 const generateFileName = (file) => {
   const ext = path.extname(file.originalname).toLowerCase();
   const code = randomStringGenerator(20);
-  return `bleeding-tech-${code}${ext}`;
-  
+  return `Paramount-School-${code}${ext}`;
 };
 
 // ─── Filters ──────────────────────────────────────────────────────────────

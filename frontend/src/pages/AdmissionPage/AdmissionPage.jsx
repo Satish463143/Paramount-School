@@ -20,7 +20,6 @@ const AdmissionPage = () => {
         <RequiredDocuments />
         {/* <ImportantDates /> */}
         <SchoolVisit />
-        <ClosingCTA/>
     </div>
   )
 }
