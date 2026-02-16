@@ -11,7 +11,7 @@ class BannerController  {
             res.json({
                 meta:null,
                 message:"Banner created successfully",
-                data:response
+                result:response
             })
 
         }catch(exception){

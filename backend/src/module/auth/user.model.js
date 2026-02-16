@@ -32,6 +32,14 @@ const userSchema = new mongoose.Schema({
     activeFor:{
         type:Date,
         required:true
+    },
+    token:{
+        type:String,
+        default:null
+    },
+    refreshToken:{
+        type:String,
+        default:null
     }
     
 },{

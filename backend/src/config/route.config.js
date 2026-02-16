@@ -7,6 +7,8 @@ const bannerRouter = require('../module/banner/banner.router');
 router.use('/auth', authRouter);
 router.use('/contact', contactRouter)
 router.use('/banner', bannerRouter)
+router.use('/contact', contactRouter)
+
 
 
 module.exports = router;

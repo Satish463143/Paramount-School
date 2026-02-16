@@ -6,17 +6,17 @@ require("./db.config")
 const app = express();
 
 const allowedorigin = [
-    'http://localhost:5173'
+    'http://localhost:5173',
 ]
 const corsOptions = {
     origin:(origin, callback)=>{
         if(!origin || allowedorigin.includes(origin)){
-            callback(null, type);
+            callback(null, true);
         } else {
             callback(new Error("Not allowed by CORS"))
         }
     },
-    credential:true,
+    credentials:true,
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders:['Content-Type','Authorization'],
     maxAge:60*60*24
