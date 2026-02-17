@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass, Target, Heart, Star, Sun, ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const VisionAndMission = () => {
     return (
@@ -118,7 +119,7 @@ const VisionAndMission = () => {
                                 
                                 <div className="mt-8 pt-4 border-t border-border/50 flex flex-wrap gap-4 items-center justify-between">
                                      <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-full overflow-hidden shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all active:scale-95">
-                                        <span>Join our Family</span>
+                                        <Link to="/contact-us"><span>Join our Family</span></Link>
                                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 </div>

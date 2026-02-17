@@ -1,44 +1,53 @@
 const GalleryCategory = require("./galleryCategory.model")
 
-class GalleryCategoryService{
-    createGalleryCategory = async (body) => {
-        try {
-            const galleryCategory = await GalleryCategory.create(body)
-            return galleryCategory.save()
+class GalleryCategoryService {
 
-        } catch (error) {
-            throw error
+    create = async(data)=>{
+        try{
+            const response = await GalleryCategory.create(data)
+            return response.save()
             
+        }catch(exception){
+            throw exception
         }
     }
-    getAllGalleryCategory = async (filter,skip,limit)=>{
-        try {
+    listALL = async({filter={}, skip=0, limits=10})=>{
+        try{
             const query = GalleryCategory.find(filter)
-                .sort({_id:-1})
+                .limit(limits)
                 .skip(skip)
-                .limit(limit)
+                .sort({createdAt:-1})
                 .lean()
             
             const [count, data] = await Promise.all([
                 GalleryCategory.countDocuments(filter),
                 query
             ])
-            return {count,data}
-            
-        } catch (error) {
-            throw error
-            
+            return {count, data}
+        }catch(exception){
+            console.log(exception)
+            throw exception
         }
     }
-    deleteGalleryCategory = async (id) => {
-        try {
-            const galleryCategory = await GalleryCategory.findByIdAndDelete(id)
-            if(!galleryCategory){
-                throw new Error("Gallery Category not found")
+    showById = async(id)=>{
+        try{
+            const response = await GalleryCategory.findOne({ _id: id }).lean()
+            return response
+        }catch(exception){
+            console.log(exception)
+            throw exception
+        }
+    }
+    delete = async(id)=>{
+        try{
+            const response = await GalleryCategory.findOneAndDelete({ _id: id }).lean()
+            if(!response){
+                throw {status:404, message:"Gallery Category not found"}
             }
-            return galleryCategory
-        } catch (error) {
-            throw error
+            return response
+        }catch(exception){
+            console.log(exception)
+            throw exception
         }
     }
 }

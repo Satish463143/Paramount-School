@@ -1,5 +1,6 @@
-import React from 'react';
 import { GraduationCap, Users, BookOpen } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const academicLevels = [
     {
@@ -32,6 +33,17 @@ const academicLevels = [
 ];
 
 const AcademicLevels = () => {
+    const location = useLocation();
+  
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
+
     return (
         <section className="py-24 md:py-32 bg-background relative overflow-hidden" id="academic-levels">
             
@@ -63,7 +75,7 @@ const AcademicLevels = () => {
                 </div>
 
                 {/* Academic Levels - Sectioned Layout */}
-                <div className="space-y-20 md:space-y-32">
+                <div className="space-y-20 md:space-y-32" >
                     {academicLevels.map((level, index) => (
                         <div key={index}>
                             {/* Subtle section divider (except for first item) */}

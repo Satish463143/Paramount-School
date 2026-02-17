@@ -56,9 +56,9 @@ const AboutSchool = () => {
                         {/* Header Group */}
                         <div className="space-y-6">
                             <div className="flex items-center gap-2 mb-6">
-    <div className="h-[2px] w-12 bg-secondary" />
-    <span className="text-secondary font-bold text-xs tracking-[0.3em] uppercase">Join Our Legacy</span>
-    </div>
+                                <div className="h-[2px] w-12 bg-secondary" />
+                                <span className="text-secondary font-bold text-xs tracking-[0.3em] uppercase">Join Our Legacy</span>
+                            </div>
 
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.1]">
                                 A Tradition of <br />

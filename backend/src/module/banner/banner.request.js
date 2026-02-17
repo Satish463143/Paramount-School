@@ -6,9 +6,9 @@ const bannerDTO = joi.object({
     subheadline: joi.string().required(),
     primaryCta: joi.string().required(),
     primaryCtaLink: joi.string().required(),
-    secondaryCta: joi.string().optional(),
-    secondaryCtaLink: joi.string().optional(),
-    image: joi.string().required(),
+    secondaryCta: joi.string().optional().allow(''),
+    secondaryCtaLink: joi.string().optional().allow(''),
+    image: joi.string().optional(), // Made optional for updates
     status: joi.string().valid(...Object.values(status)).default(status.ACTIVE)
 })
 

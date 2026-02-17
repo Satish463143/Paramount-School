@@ -1,10 +1,19 @@
 const mongoose = require("mongoose");
 
 const galleryCategorySchema = new mongoose.Schema({
-    categoryName: {
+    title: {
         type: String,
         required: true
-    }    
+    },
+    tagline: {
+        type: String,
+        required: true
+    },
+    image: {
+        type: String,
+        required: true
+    },    
+
 },{
     autoCreate:true,
     autoIndex:true,

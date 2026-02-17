@@ -1,53 +1,13 @@
 import React from 'react';
 import { GraduationCap, Award, Heart, ArrowRight, Sparkles, Star } from 'lucide-react';
 import Title from '@/components/common/Title/Title';
+import { useListAllQuery } from '@/api/team.api';
 
-const faculty = [
-    {
-        name: "Dr. Emily Chen",
-        role: "Principal & Mathematics",
-        qualification: "PhD in Education, 15+ years experience",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop",
-        color: "from-blue-400 to-cyan-300"
-    },
-    {
-        name: "Mr. James Wilson",
-        role: "Science Teacher",
-        qualification: "M.Sc. Biology, 10 years experience",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop",
-        color: "from-green-400 to-emerald-300"
-    },
-    {
-        name: "Ms. Sarah Martinez",
-        role: "English & Literature",
-        qualification: "M.A. English, Award-winning educator",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2661&auto=format&fit=crop",
-        color: "from-pink-400 to-rose-300"
-    },
-    {
-        name: "Mr. David Kumar",
-        role: "Physical Education",
-        qualification: "B.Ed. Sports Science, National Coach",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop",
-        color: "from-orange-400 to-amber-300"
-    },
-    {
-        name: "Ms. Lisa Anderson",
-        role: "Art & Creativity",
-        qualification: "BFA, 8 years nurturing young artists",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2670&auto=format&fit=crop",
-        color: "from-purple-400 to-violet-300"
-    },
-    {
-        name: "Mr. Ahmed Hassan",
-        role: "Technology & Innovation",
-        qualification: "M.Tech, Coding mentor",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop",
-        color: "from-indigo-400 to-blue-300"
-    }
-];
 
 const FacultyOverview = () => {
+    const {data, isLoading, error} = useListAllQuery({page: 1, limit: 100})
+    const teachers = data?.result || []
+    console.log(teachers)
     return (
         <section className="py-20 md:py-32 bg-background relative overflow-hidden" id="faculty">
             
@@ -73,7 +33,7 @@ const FacultyOverview = () => {
 
                 {/* Faculty Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-12">
-                    {faculty.map((teacher, index) => (
+                    {teachers.map((teacher, index) => (
                         <div 
                             key={index}
                             className="group"
@@ -84,7 +44,7 @@ const FacultyOverview = () => {
                                 
                                 {/* Image Section */}
                                 <div className="relative h-72 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900">
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${teacher.color} opacity-20 mix-blend-overlay`} />
+                                    <div className={`absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 opacity-20 mix-blend-overlay`} />
                                     <img 
                                         src={teacher.image}
                                         alt={teacher.name}
@@ -101,13 +61,13 @@ const FacultyOverview = () => {
                                 <div className="p-6 text-center relative">
                                     
                                     {/* Decorative Shape */}
-                                    <div className={`absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-gradient-to-br ${teacher.color} rotate-45 shadow-lg`} />
+                                    <div className={`absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-300 rotate-45 shadow-lg`} />
                                     
                                     <div className="mt-4">
                                         <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all">
                                             {teacher.name}
                                         </h3>
-                                        <p className={`text-lg font-semibold bg-gradient-to-r ${teacher.color} bg-clip-text text-transparent mb-2`}>
+                                        <p className={`text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent mb-2`}>
                                             {teacher.role}
                                         </p>
                                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -116,7 +76,7 @@ const FacultyOverview = () => {
                                     </div>
 
                                     {/* Decorative Bottom Blob */}
-                                    <div className={`absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl ${teacher.color} opacity-10 rounded-tl-[100%] -z-10`} />
+                                    <div className={`absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-blue-400 to-cyan-300 opacity-10 rounded-tl-[100%] -z-10`} />
                                 </div>
 
                                 {/* Sparkle Effect on Hover */}
@@ -125,29 +85,6 @@ const FacultyOverview = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* CTA Section */}
-                <div className="text-center" data-aos="fade-up">
-                    <div className="inline-block relative">
-                        {/* Decorative Blobs */}
-                        <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-yellow-300 to-orange-300 rounded-full opacity-20 blur-xl animate-pulse" />
-                        <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-gradient-to-br from-pink-300 to-purple-300 rounded-full opacity-20 blur-xl animate-pulse delay-1000" />
-                        
-                        <button className="relative group px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
-                            <span className="relative z-10 flex items-center gap-3">
-                                <GraduationCap size={24} className="group-hover:rotate-12 transition-transform" />
-                                <span>Meet Our Full Teaching Team</span>
-                                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                            </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </button>
-                    </div>
-                    
-                    <p className="mt-6 text-muted-foreground text-sm max-w-2xl mx-auto">
-                        Want to know more about our incredible educators? Click above to explore their full profiles and teaching philosophies! 📚
-                    </p>
-                </div>
-
             </div>
         </section>
     );

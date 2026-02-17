@@ -1,28 +1,50 @@
-const jwt = require("jsonwebtoken");
 
-const loginCheck = (req, res, next) => {
-    try {
+require("dotenv").config();
+const jwt = require("jsonwebtoken")
+const authService = require("../module/auth/auth.service");
+
+const loginCheck = async (req, res, next) => {
+    try {       
         let token = req.headers['authorization'] || null;
-
-        if (!token) {
-            throw { status: 401, message: "Unauthorized access: token not provided" }
-        }
-
-        // Handle Bearer prefix if present
-        if (token.startsWith('Bearer ')) {
-            token = token.split(' ')[1];
-        }
-
-        const data = jwt.verify(token, process.env.JWT_SECRET)
         
-        // Attach user ID to request
-        req.user_id = data.sub;
+        // If no token in headers, check cookies
+        if (!token && req.cookies && req.cookies.token) {
+            token = req.cookies.token;
+        } else if (token) {
+            token = token.split(" ").pop();
+        }
+        
+        if (!token) {
+            throw { status: 401, message: "Unauthorized access: Token not provided" };
+        }
 
+        const data = jwt.verify(token, process.env.JWT_SECRET);
+        if(data.hasOwnProperty('type')){
+            throw{status:403, message: "Main Token is required"} 
+        }
+
+        const user = await authService.getSingleUserByFilter({
+            _id: data.sub
+        });
+
+        if (!user) {
+            throw { status: 404, message: "User does not exist" };
+        }
+        
+        req.authUser = {
+            _id: user._id,
+            name: user.name,
+            role: user.role,
+            status: user.status,
+            email:user.email
+        };
         next();
     } catch (exception) {
-        console.log(exception)
-        next({ status: exception.status || 401, message: exception.message || "Unauthorized" })
+        next({ status: exception.status || 401, message: exception.message || "Unauthorized" });
     }
-}
+};
+
+
+
 
 module.exports = loginCheck;

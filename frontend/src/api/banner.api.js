@@ -21,10 +21,22 @@ export const BannersApi = createApi({
   refetchOnReconnect: true,        // handy if the user was offline
   endpoints: (builder) => ({
     listAll: builder.query({
-        query: () => "/",      
+        query: ({ page = 1, limit = 10, search = '' } = {}) => {
+          const params = new URLSearchParams();
+          if (page) params.append('page', page);
+          if (limit) params.append('limit', limit);
+          if (search) params.append('search', search);
+          return `/?${params.toString()}`;
+        },
         keepUnusedDataFor: 300, // home banners change rarely — cache longer (5 minutes)
-        // Provide tags for better cache management
-        providesTags: ['Banners'],
+        // Provide tags for better cache management - use LIST id for consistency
+        providesTags: (result) => 
+          result?.result
+            ? [
+                ...result.result.map(({ _id }) => ({ type: 'Banners', id: _id })),
+                { type: 'Banners', id: 'LIST' },
+              ]
+            : [{ type: 'Banners', id: 'LIST' }],
         // Transform response to ensure consistent structure
         transformResponse: (response) => response,
       
@@ -34,7 +46,13 @@ export const BannersApi = createApi({
       query: () => "/listForHome",      
       keepUnusedDataFor: 300, // home banners change rarely — cache longer (5 minutes)
       // Provide tags for better cache management
-      providesTags: ['Banners'],
+      providesTags: (result) => 
+        result?.result
+          ? [
+              ...result.result.map(({ _id }) => ({ type: 'Banners', id: _id })),
+              { type: 'Banners', id: 'HOME_LIST' },
+            ]
+          : [{ type: 'Banners', id: 'HOME_LIST' }],
       // Transform response to ensure consistent structure
       transformResponse: (response) => response,
     }),
@@ -50,8 +68,8 @@ export const BannersApi = createApi({
         method: "POST",
         body: formData,
       }),
-      // invalidate only the list (and possibly new id if response returns it)
-      invalidatesTags: (_res) => [{ type: "Banners", id: "LIST" }],
+      // Invalidate both list queries to refresh the UI
+      invalidatesTags: [{ type: "Banners", id: "LIST" }, { type: "Banners", id: "HOME_LIST" }],
     }),
 
     update: builder.mutation({
@@ -60,7 +78,12 @@ export const BannersApi = createApi({
         method: "PUT",
         body: payload,
       }),
-      
+      // Invalidate the specific banner and both list queries
+      invalidatesTags: (_res, _err, { id }) => [
+        { type: "Banners", id },
+        { type: "Banners", id: "LIST" },
+        { type: "Banners", id: "HOME_LIST" },
+      ],
     }),
 
     delete: builder.mutation({
@@ -68,9 +91,11 @@ export const BannersApi = createApi({
         url: `/${id}`,
         method: "DELETE",
       }),
+      // Invalidate the specific banner and both list queries
       invalidatesTags: (_res, _err, id) => [
         { type: "Banners", id },
         { type: "Banners", id: "LIST" },
+        { type: "Banners", id: "HOME_LIST" },
       ],
     })
   }),

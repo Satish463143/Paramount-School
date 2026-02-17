@@ -1,54 +1,52 @@
 import React from "react";
 import { Calendar, ArrowRight, Star, Sparkles, MapPin } from "lucide-react";
 import Button from "../../common/Button/Button";
+import { useListAllQuery } from "@/api/events.api";
+import { Link } from "react-router-dom";
 
-const EVENTS_DATA = [
-  {
-    id: 1,
-    title: "Annual Sports Meet 2026",
-    description: "A grand celebration of athleticism, team spirit, and physical excellence featuring over 20 competitive disciplines.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop",
-    date: "15",
-    month: "FEB",
-    featured: true,
-    tag: "Major Event",
-    delay: 100
-  },
-  {
-    id: 2,
-    title: "Cultural Arts Fest",
-    description: "Showcasing student talent through vibrant performances, music, and art.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop",
-    date: "22",
-    month: "MAR",
-    featured: false,
-    delay: 200
-  },
-  {
-    id: 3,
-    title: "Science & Innovation",
-    description: "Fostering curiosity through hands-on student projects and modern technological models.",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
-    date: "10",
-    month: "APR",
-    featured: false,
-    delay: 300
-  },
-  {
-    id: 4,
-    title: "Educational Field Trip",
-    description: "Expanding horizons with outdoor learning and historical exploration.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop",
-    date: "05",
-    month: "MAY",
-    featured: false,
-    delay: 400
-  }
-];
+// Utility function to format full date
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { 
+    month: 'short', 
+    day: '2-digit', 
+    year: 'numeric' 
+  });
+};
+
+// Extract day from date
+const getDay = (dateString) => {
+  const date = new Date(dateString);
+  return date.getDate().toString().padStart(2, '0');
+};
+
+// Extract month abbreviation
+const getMonth = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+};
+
+// Extract year
+const getYear = (dateString) => {
+  const date = new Date(dateString);
+  return date.getFullYear();
+};
 
 const Events = () => {
-  const featuredEvent = EVENTS_DATA.find(e => e.featured);
-  const otherEvents = EVENTS_DATA.filter(e => !e.featured);
+  const {data, isLoading, error} = useListAllQuery()
+  
+  if (isLoading) return <div className="flex items-center justify-center h-screen">Loading...</div>
+  if (error) return <div className="flex items-center justify-center h-screen">Error loading events</div>
+  
+  const eventsList = data?.result || []
+  
+  // First event is featured, rest are other events
+  const featuredEvent = eventsList[0]
+  const otherEvents = eventsList.slice(1, 4) // Show up to 3 other events
+  
+  if (!featuredEvent) {
+    return <div className="flex items-center justify-center h-screen">No events available</div>
+  }
 
   return (
     <section className="py-24 relative overflow-hidden bg-white dark:bg-zinc-950 transition-colors duration-500">
@@ -86,7 +84,7 @@ const Events = () => {
               {/* Featured Label */}
               <div className="absolute top-8 left-8 flex items-center gap-3 bg-white/20 backdrop-blur-xl border border-white/30 px-6 py-3 rounded-2xl text-white">
                 <Star size={18} className="fill-secondary text-secondary" />
-                <span className="text-xs font-bold tracking-widest uppercase">{featuredEvent.tag}</span>
+                <span className="text-xs font-bold tracking-widest uppercase">Featured Event</span>
               </div>
 
               {/* Featured Content Overlay */}
@@ -97,7 +95,7 @@ const Events = () => {
                       <div className="flex items-center gap-3 text-secondary mb-4">
                         <Calendar size={20} />
                         <span className="text-lg font-black tracking-tighter text-white">
-                          {featuredEvent.date} {featuredEvent.month}, 2026
+                          {getDay(featuredEvent.date)} {getMonth(featuredEvent.date)}, {getYear(featuredEvent.date)}
                         </span>
                       </div>
                       <h3 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
@@ -109,7 +107,7 @@ const Events = () => {
                     </div>
                     
                     <button className="shrink-0 w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-500 shadow-xl shadow-secondary/20">
-                      <ArrowRight size={32} />
+                      <Link to="/events-notices#events"><ArrowRight size={32} /></Link>
                     </button>
                   </div>
                 </div>
@@ -121,17 +119,17 @@ const Events = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center justify-between mb-8 pl-4" data-aos="fade-up">
               <h4 className="text-xl font-bold tracking-tight text-foreground">Upcoming Activities</h4>
-              <a href="#" className="text-sm font-bold text-secondary flex items-center gap-2 hover:gap-3 transition-all">
+              <Link to="/events-notices#events" className="text-sm font-bold text-secondary flex items-center gap-2 hover:gap-3 transition-all">
                 VIEW ALL <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
 
             {otherEvents.map((event, idx) => (
               <div 
-                key={event.id}
+                key={event._id}
                 className="group flex flex-col sm:flex-row items-center gap-6 p-6 bg-card/40 backdrop-blur-xl border border-border/50 rounded-[2.5rem] transition-all duration-500 hover:bg-card hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1"
                 data-aos="fade-left"
-                data-aos-delay={event.delay}
+                data-aos-delay={(idx + 1) * 100}
               >
                 <div className="relative w-full sm:w-32 h-32 shrink-0 rounded-[1.5rem] overflow-hidden">
                   <img 
@@ -140,8 +138,8 @@ const Events = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-2 left-2 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md px-3 py-1.5 rounded-xl text-center">
-                    <p className="text-sm font-black leading-none text-foreground">{event.date}</p>
-                    <p className="text-[8px] font-bold text-muted-foreground uppercase">{event.month}</p>
+                    <p className="text-sm font-black leading-none text-foreground">{getDay(event.date)}</p>
+                    <p className="text-[8px] font-bold text-muted-foreground uppercase">{getMonth(event.date)}</p>
                   </div>
                 </div>
                 
@@ -155,7 +153,7 @@ const Events = () => {
                 </div>
 
                 <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                  <ArrowRight size={18} />
+                 <Link to="/events-notices#events"><ArrowRight size={18} /></Link>
                 </div>
               </div>
             ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Phone, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ClosingCTA = () => {
     return (
@@ -42,36 +43,36 @@ const ClosingCTA = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6" data-aos="fade-up" data-aos-delay="200">
                         
                         {/* Primary Action */}
-                        <a 
-                            href="/admissions" 
+                        <Link 
+                            to="/admissions" 
                             className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full overflow-hidden transition-all duration-300 active:scale-95 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 w-full sm:w-auto justify-center"
                         >
                             <span className="relative z-10">Explore Admissions</span>
                             <ArrowRight size={20} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
-                        </a>
+                        </Link>
 
                         {/* Secondary Action */}
-                        <a 
-                            href="/contact" 
+                        <Link 
+                            to="/contact-us" 
                             className="group inline-flex items-center gap-3 px-8 py-4 bg-background text-foreground font-semibold rounded-full border-2 border-border hover:border-primary/50 transition-all duration-300 active:scale-95 w-full sm:w-auto justify-center"
                         >
                             <Phone size={20} className="text-primary transition-transform duration-300 group-hover:rotate-12" />
                             <span>Contact the School</span>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Optional Tertiary Link */}
                     <div className="pt-4" data-aos="fade-up" data-aos-delay="300">
-                        <a 
-                            href="/prospectus" 
+                        <Link 
+                            to="#" 
                             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group"
                         >
                             <FileText size={16} className="transition-transform duration-300 group-hover:translate-y-[-2px]" />
                             <span className="border-b border-transparent group-hover:border-primary transition-all">
                                 Download our prospectus
                             </span>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Reassurance Text */}

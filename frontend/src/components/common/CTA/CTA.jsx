@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, ArrowRight, Zap, GraduationCap, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
   return (
@@ -75,31 +76,31 @@ const CTA = () => {
                       Enroll today to secure your child's placement for the upcoming session.
                     </p>
                   </div>
-                  
-                  <button className="group relative px-10 py-5 bg-primary text-white rounded-2xl font-bold text-xs tracking-[0.2em] overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+                  <Link to="/admissions">
+                  <button className="group cursor-pointer relative px-10 py-5 bg-primary text-white rounded-2xl font-bold text-xs tracking-[0.2em] overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
                     <span className="relative z-10 flex items-center gap-2">
                       APPLY NOW
                       <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
                     <div className="absolute inset-0 bg-secondary translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                   </button>
+                  </Link>
                 </div>
               </div>
 
               {/* Secondary Actions */}
               <div className="mt-10 flex flex-wrap items-center gap-8 pl-4">
-                <a href="#" className="flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-secondary transition-colors group">
+                <Link to="/contact-us" className="flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-secondary transition-colors group">
                   <Zap size={16} className="text-secondary group-hover:scale-110 transition-transform" />
                   Request Prospectus
-                </a>
-                <a href="#" className="flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-secondary transition-colors group">
+                </Link>
+                <Link to="/about-us" className="flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-secondary transition-colors group">
                   <Calendar size={16} className="text-secondary group-hover:scale-110 transition-transform" />
                   Schedule Visit
-                </a>
+                </Link>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

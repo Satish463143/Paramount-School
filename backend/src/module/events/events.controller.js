@@ -21,15 +21,15 @@ class EventController  {
     }
     index = async(req,res,next)=>{
         try{
-            const page= req.query.page || 1
-            const limits = req.query.limit || 10
+            const page= parseInt(req.query.page) || 1
+            const limits = parseInt(req.query.limit) || 10
             const skip = (page-1)*limits
 
             const filter = {}
             if(req.query.search){
                 filter.title = new RegExp(req.query.search, 'i')
             }
-            const [count , data] = await eventService.listALL({filter, skip, limits})
+            const {count , data} = await eventService.listALL({filter, skip, limits})
 
             res.json({
                 result:data,

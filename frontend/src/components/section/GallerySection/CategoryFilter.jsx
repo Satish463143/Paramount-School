@@ -1,51 +1,13 @@
+import { useListAllQuery } from '@/api/galleryCategory.api';
 import React, { useState, useRef, useEffect } from 'react';
 
-const categories = [
-  {
-    id: 'events',
-    title: 'Events',
-    tagline: 'Lively School Gatherings',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop',
-    color: 'emerald',
-  },
-  {
-    id: 'sports',
-    title: 'Sports',
-    tagline: 'Athletic Excellence',
-    image: 'https://images.unsplash.com/photo-1541534401786-2077e875e05a?q=80&w=1200&auto=format&fit=crop',
-    color: 'sky',
-  },
-  {
-    id: 'academic',
-    title: 'Academics',
-    tagline: 'Learning Journeys',
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop',
-    color: 'indigo',
-  },
-  {
-    id: 'cultural',
-    title: 'Cultural',
-    tagline: 'Artistic Expressions',
-    image: 'https://images.unsplash.com/photo-1514525253361-bee24387052b?q=80&w=1200&auto=format&fit=crop',
-    color: 'purple',
-  },
-  {
-    id: 'campus',
-    title: 'Campus',
-    tagline: 'Daily Life & Vibes',
-    image: 'https://images.unsplash.com/photo-1523050853051-f750004987a9?q=80&w=1200&auto=format&fit=crop',
-    color: 'rose',
-  },
-  {
-    id: 'trips',
-    title: 'Field Trips',
-    tagline: 'Exploring the World',
-    image: 'https://images.unsplash.com/photo-1503919919749-646dc41097e3?q=80&w=1200&auto=format&fit=crop',
-    color: 'amber',
-  },
-];
-
 const CategoryFilter = ({ onCategoryChange }) => {
+  const [page] = useState(1)
+  const [limit] = useState(1000)
+  const [search] = useState('')
+  const {data, isLoading, error} = useListAllQuery({ page, limit, search })
+  const galleryCategory = data?.result || []
+
   const [activeCategory, setActiveCategory] = useState('events');
   const scrollRef = useRef(null);
 
@@ -84,37 +46,37 @@ const CategoryFilter = ({ onCategoryChange }) => {
       {/* The "Visual Lens" Horizontal Selector */}
       <div className="relative w-full overflow-x-auto no-scrollbar pb-10" ref={scrollRef}>
         <div className="flex flex-nowrap gap-6 px-4 md:px-[5vw]">
-          {categories.map((cat, index) => (
+          {galleryCategory.map((cat, index) => (
             <button 
-              key={cat.id}
-              onClick={() => handleCategoryClick(cat.id)}
+              key={cat._id}
+              onClick={() => handleCategoryClick(cat._id)}
               className={`group relative flex-shrink-0 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-                activeCategory === cat.id 
+                activeCategory === cat._id 
                   ? 'w-[75vw] md:w-[45vw] lg:w-[35vw]' 
                   : 'w-[20vw] md:w-[15vw] lg:w-[12vw]'
               }`}
             >
               <div className={`relative h-[50vh] md:h-[60vh] w-full rounded-[3.5rem] md:rounded-[5rem] overflow-hidden shadow-2xl transition-all duration-500 ${
-                activeCategory === cat.id ? 'ring-8 ring-primary/20 scale-[0.98]' : 'hover:scale-95'
+                activeCategory === cat._id ? 'ring-8 ring-primary/20 scale-[0.98]' : 'hover:scale-95'
               }`}>
                 {/* Parallax Background */}
                 <img 
                   src={cat.image} 
                   alt={cat.title} 
                   className={`w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 ${
-                    activeCategory === cat.id ? 'scale-110 grayscale-0' : 'grayscale-[0.4] filter contrast-125'
+                    activeCategory === cat._id ? 'scale-110 grayscale-0' : 'grayscale-[0.4] filter contrast-125'
                   }`}
                 />
                 
                 {/* Overlay Layers */}
                 <div className={`absolute inset-0 bg-slate-900/40 transition-opacity duration-700 ${
-                  activeCategory === cat.id ? 'opacity-20' : 'opacity-60 group-hover:opacity-40'
+                  activeCategory === cat._id ? 'opacity-20' : 'opacity-60 group-hover:opacity-40'
                 }`} />
                 
                 {/* Content - Expanding Lens Effect */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                   <div className={`transition-all duration-700 ${
-                    activeCategory === cat.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    activeCategory === cat._id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}>
                     <span className={`inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-xl border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-4`}>
                       {cat.tagline}
@@ -126,7 +88,7 @@ const CategoryFilter = ({ onCategoryChange }) => {
 
                   {/* Minimized View Title (Vertical Text) */}
                   <div className={`absolute transition-all duration-700 pointer-events-none ${
-                    activeCategory === cat.id ? 'opacity-0 scale-50' : 'opacity-100 scale-100'
+                    activeCategory === cat._id ? 'opacity-0 scale-50' : 'opacity-100 scale-100'
                   }`}>
                     <h4 className="text-xl md:text-2xl font-black text-white/90 uppercase tracking-widest whitespace-nowrap rotate-90 origin-center">
                       {cat.title}
@@ -136,7 +98,7 @@ const CategoryFilter = ({ onCategoryChange }) => {
 
                 {/* Animated Indicator line */}
                 <div className={`absolute bottom-10 left-10 right-10 flex justify-center transition-all duration-700 ${
-                  activeCategory === cat.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                  activeCategory === cat._id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                 }`}>
                    <div className="w-full h-1 bg-white/30 rounded-full overflow-hidden">
                       <div className="h-full bg-white w-2/3 animate-loading-bar" />
@@ -145,7 +107,7 @@ const CategoryFilter = ({ onCategoryChange }) => {
               </div>
 
               {/* Magnetic Hover Indicator (Floating Dot) */}
-              {activeCategory === cat.id && (
+              {activeCategory === cat._id && (
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 pointer-events-none animate-bounce">
                   <div className={`w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40`}>
                      <div className="w-3 h-3 bg-white rounded-full" />

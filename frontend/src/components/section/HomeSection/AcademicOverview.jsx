@@ -2,6 +2,7 @@ import React from "react";
 import { BookOpen, Users, Compass, ArrowRight } from "lucide-react";
 import Title from "../../common/Title/Title";
 import Button from "../../common/Button/Button"
+import { Link } from "react-router-dom";
 
 const ACADEMIC_LEVELS = [
   {
@@ -109,10 +110,12 @@ const AcademicOverview = () => {
                 </div>
 
                 <div className="pt-6 border-t border-border/50">
-                  <button className="flex items-center gap-2 text-primary font-bold text-sm tracking-wide group/btn">
+                <Link to="/academics#academic-levels">
+                  <button className="flex items-center cursor-pointer gap-2 text-primary font-bold text-sm tracking-wide group/btn">
                     LEARN MORE
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
                   </button>
+                </Link>
                 </div>
               </div>
             </div>
@@ -120,7 +123,7 @@ const AcademicOverview = () => {
         </div>
 
         {/* CTA Button */}
-        <Button title="EXPLORE ALL PROGRAMS" link="/academic" />
+        <Button title="EXPLORE ALL PROGRAMS" link="/academics#academic-levels" />
 
         {/* Closing Philosophy Statement */}
         <div 

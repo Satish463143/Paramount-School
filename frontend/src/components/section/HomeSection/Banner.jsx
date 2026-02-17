@@ -1,48 +1,21 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const BANNER_DATA = [
-  {
-    id: 1,
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2670&auto=format&fit=crop",
-    headline: "Shaping Young Minds with Knowledge and Values",
-    subheadline:
-      "A nurturing environment where every child's potential is recognized and celebrated.",
-    primaryCta: "Apply for Admission",
-    secondaryCta: "Explore School",
-  },
-  {
-    id: 2,
-    image:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2670&auto=format&fit=crop",
-    headline: "Fostering Innovation and Collaborative Learning",
-    subheadline:
-      "Empowering students with modern skills through academic and cultural excellence.",
-    primaryCta: "View Our Programs",
-    secondaryCta: "Our Activities",
-  },
-  {
-    id: 3,
-    image:
-      "https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=2670&auto=format&fit=crop",
-    headline: "A Safe, Caring, and Inspiring Environment",
-    subheadline:
-      "Where teachers and students work together for a brighter future.",
-    primaryCta: "Visit Campus",
-    secondaryCta: "Meet Our Faculty",
-  },
-];
+import { useListForHomeQuery } from "@/api/banner.api";
 
 
 const Banner = () => {
+  const {data, isLoading, error } = useListForHomeQuery()
+  if(isLoading) return <div className="flex items-center justify-center h-screen">Loading...</div>
+  if(error) return <div className="flex items-center justify-center h-screen">Error: {error.message}</div>
+
+  const bannerList = data?.result
+  
+
   return (
     <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
       <Swiper
@@ -62,7 +35,7 @@ const Banner = () => {
         }}
         className="h-full"
       >
-        {BANNER_DATA.map((slide) => (
+        {bannerList?.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
               {/* Image */}
@@ -87,11 +60,13 @@ const Banner = () => {
 
                   <div className="flex gap-4 flex-wrap">
                     <button className="px-8 py-3 bg-secondary text-white rounded-full font-semibold hover:scale-105 transition">
-                      {slide.primaryCta}
+                      <Link to={slide.primaryCtaLink}>{slide.primaryCta}</Link>
                     </button>
-                    <button className="px-8 py-3 border border-white/40 rounded-full text-white hover:bg-white/10 transition">
-                      {slide.secondaryCta}
-                    </button>
+                    {slide.secondaryCta && (
+                      <button className="px-8 py-3 border border-white/40 rounded-full text-white hover:bg-white/10 transition">
+                        <Link to={slide.secondaryCtaLink}>{slide.secondaryCta}</Link>
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

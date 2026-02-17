@@ -24,8 +24,8 @@ class ContactController {
     }
     getAllContact = async (req, res,next) => {
         try {
-            const limit = req.query.limit || 10;
-            const page = req.query.page || 1;
+            const limit = parseInt(req.query.limit) || 10;
+            const page = parseInt(req.query.page) || 1;
             const skip = (page - 1) * limit;
 
             const filter = {}
@@ -33,14 +33,14 @@ class ContactController {
                 filter.name = new RegExp(req.query.search,"i")
             }
 
-            const {count , data } = await contactService.getAllContact({filter,skip,limit})
+            const {count , data } = await contactService.getAllContact(filter, skip, limit)
             
             res.json({
                 result:data,
                 message:"Contact fetched successfully",
-                meat:{
+                meta:{
                     total:count,
-                    page:page,
+                    currentPage:page,
                     limit:limit
                 }
             })

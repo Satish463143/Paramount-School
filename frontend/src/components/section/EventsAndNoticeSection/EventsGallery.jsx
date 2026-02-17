@@ -1,33 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2, Calendar } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { useListAllQuery } from '@/api/gallery.api';
 
-const eventsGalleryData = [
-  {
-    id: 1,
-    title: 'Annual Sports Day 2026',
-    date: '15 Feb 2026',
-    description: 'A celebration of athleticism, teamwork, and school spirit.',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'The Final Sprint' },
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'Team Coordination' },
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'Trophy Ceremony' },
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'Junior Athletics' },
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'Closing Parade' },
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'Closing Parade' },
-      { url: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop', caption: 'Closing Parade' },
-    ],
-  },
-];
 
 const EventsGallery = () => {
+  const {data, isLoading, error} = useListAllQuery()
+  const eventsGalleryData = data?.result || []
+  console.log(eventsGalleryData)
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeEventImages, setActiveEventImages] = useState([]);
 
-  const openLightbox = (images, index) => {
-    setActiveEventImages(images);
+  const openLightbox = (index) => {
     setCurrentIndex(index);
-    setSelectedImage(images[index]);
+    setSelectedImage(eventsGalleryData[index]);
     document.body.style.overflow = 'hidden';
   };
 
@@ -37,15 +23,15 @@ const EventsGallery = () => {
   };
 
   const nextImage = () => {
-    const nextIdx = (currentIndex + 1) % activeEventImages.length;
+    const nextIdx = (currentIndex + 1) % eventsGalleryData.length;
     setCurrentIndex(nextIdx);
-    setSelectedImage(activeEventImages[nextIdx]);
+    setSelectedImage(eventsGalleryData[nextIdx]);
   };
 
   const prevImage = () => {
-    const prevIdx = (currentIndex - 1 + activeEventImages.length) % activeEventImages.length;
+    const prevIdx = (currentIndex - 1 + eventsGalleryData.length) % eventsGalleryData.length;
     setCurrentIndex(prevIdx);
-    setSelectedImage(activeEventImages[prevIdx]);
+    setSelectedImage(eventsGalleryData[prevIdx]);
   };
 
   // Keyboard navigation
@@ -58,7 +44,9 @@ const EventsGallery = () => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage, currentIndex]);
+  }, [selectedImage, currentIndex, eventsGalleryData]);
+
+  if (isLoading) return <div className="py-24 text-center">Loading gallery...</div>
 
   return (
     <section className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 relative">
@@ -78,76 +66,40 @@ const EventsGallery = () => {
           </p>
         </div>
 
-        {/* Events Mosaic Blocks */}
-        <div className="space-y-32">
-          {eventsGalleryData.map((event, eventIdx) => (
-            <div key={event.id} className="group">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10" data-aos="fade-up">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-slate-400 font-bold text-xs uppercase tracking-widest">
-                    <Calendar className="w-4 h-4 text-primary" />
-                    {event.date}
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-foreground group-hover:text-primary transition-colors">
-                    {event.title}
-                  </h3>
-                  <p className="text-muted-foreground font-medium max-w-xl">{event.description}</p>
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {eventsGalleryData.slice(0, 12).map((item, index) => (
+            <div 
+              key={item._id} 
+              className="group relative aspect-square overflow-hidden rounded-[2rem] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              onClick={() => openLightbox(index)}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span className="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  {item.title}
+                </span>
+                <div className="flex items-center gap-2 text-white/70 text-xs mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                   <Maximize2 className="w-3 h-3" /> Click to enlarge
                 </div>
-                <button className="px-8 py-3 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm hover:scale-105 transition-transform shadow-lg shadow-slate-200 dark:shadow-none">
-                  View Full Gallery
-                </button>
-              </div>
-
-              {/* Mosaic Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-[500px] md:h-[600px]">
-                {/* Hero Image */}
-                <div 
-                  className="col-span-2 row-span-2 relative overflow-hidden rounded-[2.5rem] cursor-pointer group/img shadow-xl"
-                  onClick={() => openLightbox(event.images, 0)}
-                  data-aos="fade-right"
-                >
-                  <img 
-                    src={event.images[0].url} 
-                    alt={event.images[0].caption} 
-                    className="w-full h-full object-cover transition-all duration-700 group-hover/img:scale-110 group-hover/img:rotate-1"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                     <span className="text-white font-bold text-lg">{event.images[0].caption}</span>
-                     <div className="flex items-center gap-2 text-white/70 text-sm mt-1">
-                        <Maximize2 className="w-4 h-4" /> Click to enlarge
-                     </div>
-                  </div>
-                </div>
-
-                {/* Supporting Images */}
-                {event.images.slice(1, 5).map((img, idx) => (
-                  <div 
-                    key={idx}
-                    className={`relative overflow-hidden rounded-[2rem] cursor-pointer group/img shadow-lg ${
-                      idx === 2 ? 'md:col-span-2' : ''
-                    }`}
-                    onClick={() => openLightbox(event.images, idx + 1)}
-                    data-aos="zoom-in"
-                    data-aos-delay={idx * 100}
-                  >
-                    <img 
-                      src={img.url} 
-                      alt={img.caption} 
-                      className="w-full h-full object-cover transition-all duration-700 group-hover/img:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
-                       <Maximize2 className="w-8 h-8 text-white scale-50 group-hover/img:scale-100 transition-transform" />
-                    </div>
-                    {idx === 3 && event.images.length > 5 && (
-                      <div className="absolute inset-0 bg-slate-900/60 flex items-center justify-center">
-                         <span className="text-white font-black text-2xl">+{event.images.length - 5} More</span>
-                      </div>
-                    )}
-                  </div>
-                ))}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="mt-16 text-center" data-aos="fade-up">
+          <button className="px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm tracking-wide hover:scale-105 transition-transform shadow-lg shadow-slate-200 dark:shadow-none">
+            View Full Gallery Archive
+          </button>
         </div>
 
         {/* Global Lightbox */}
@@ -179,17 +131,17 @@ const EventsGallery = () => {
             <div className="relative max-w-5xl w-full px-4 flex flex-col items-center">
                <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                   <img 
-                    src={selectedImage.url} 
-                    alt={selectedImage.caption} 
-                    className="w-full h-full object-contain"
+                    src={selectedImage.image} 
+                    alt={selectedImage.title} 
+                    className="w-full h-full object-contain bg-black/50"
                   />
                   {/* Caption Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-                     <p className="text-white text-xl font-bold text-center tracking-wide">
-                        {selectedImage.caption}
+                  <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                     <p className="text-white text-2xl font-bold text-center tracking-wide drop-shadow-md">
+                        {selectedImage.title}
                      </p>
-                     <div className="text-white/50 text-xs mt-2 text-center flex items-center justify-center gap-4">
-                        <span>Image {currentIndex + 1} of {activeEventImages.length}</span>
+                     <div className="text-white/60 text-sm mt-2 text-center flex items-center justify-center gap-4">
+                        <span>Image {currentIndex + 1} of {eventsGalleryData.length}</span>
                      </div>
                   </div>
                </div>
@@ -204,5 +156,4 @@ const EventsGallery = () => {
     </section>
   );
 };
-
 export default EventsGallery;

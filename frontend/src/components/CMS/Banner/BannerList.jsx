@@ -14,9 +14,9 @@ const BannerList = () => {
   const [search, setSearch] = useState('');
 
   const {data, isLoading, error} = useListAllQuery({page, limit, search});
-  const [deleteBanner] = useDeleteMutation()
+  const [deleteBanner] = useDeleteMutation();
 
-  const bannersList = data?.result || [];
+  const bannerList = data?.result || [];
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -26,38 +26,38 @@ const BannerList = () => {
   const handlePageChange = (newPage) => {
     setPage(newPage);
   };
-  const deleteData= async(id)=>{
-    try{
-      await deleteBanner(id).unwrap()
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Banner deleted successfully',
-        timer:1000
-      })
-    }catch(error){
-      console.log(error)
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Error deleting banner',
-        timer:1000
-      })
+  const deleteData = async(id)=>{
+      try{
+        await deleteBanner(id).unwrap()
+        Swal.fire({
+          icon: 'success',
+          title: 'Banner deleted successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        setPage(1);
+      }catch(exception){
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to delete banner',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
     }
-  }
+  
 
   return (
     <div  className='admin_margin_box'>
       <div className='admin_titles'>
-        <AdminTitle label1=' Banner List' />
+        <AdminTitle label1=' Contact List' />
         <div className='Dashboard_title'>
-          <h1>Banner List</h1>
+          <h1>Contact List</h1>
           <div>
           <input type="search" className='search_btn' placeholder='Search here by title...' value={search} onChange={handleSearchChange}/>
           <Link to='/admin/add_banner'>
-            <button className='edit_btn text-white'>Add Bannner</button>
-          </Link>
-          
+            <button className='edit_btn'>Add Bannner</button>
+          </Link> 
           </div>
         </div>      
       </div> 
@@ -69,7 +69,7 @@ const BannerList = () => {
                 <th>S.N</th>
                 <th>Image</th>
                 <th>Title</th>
-                <th>Subtitle</th>                
+                <th>Sub Title</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>
@@ -85,19 +85,19 @@ const BannerList = () => {
                     {error.data?.message || "Something went wrong while fetching banners."}
                   </td>
                 </tr>
-              ) :  bannersList.length > 0 ? (
-                bannersList.map((row, index) => (
+              ) :  bannerList.length > 0 ? (
+                bannerList.map((row, index) => (
                   <tr key={index}>
                     <td className="table_sn">{index + 1}</td>
                     <td className='table_img'>
-                      <img src={row.image} alt=""/>
+                      <img src={row.image} alt="" />
                     </td>
                     <td>{row.headline}</td>
                     <td>{row.subheadline}</td>
                     <td>{row.status}</td>
                     <td style={{ textAlign: 'center', width: '150px' }}>
                       <EditButton editUrl={`/admin/edit_banner/${row._id}`}/>
-                      <DeleteButton deleteAction={deleteData} rowId={row._id}  />                  
+                      <DeleteButton deleteAction={deleteData} rowId={row._id}  />
                     </td>
                   </tr>
                 ))
@@ -109,10 +109,10 @@ const BannerList = () => {
             </tbody>
           </table>       
         <div className='flex overflow-x-auto sm:justify-center'>
-          {data?.meta && (
+          { data?.meta && data?.meta.total > 0 &&  (
           <div className='flex overflow-x-auto sm:justify-center'>
             <Pagination
-              currentPage={data.meta.currentPage}
+              currentPage={Number(data.meta.currentPage)}
               totalPages={Math.ceil(data.meta.total / limit)}
               onPageChange={handlePageChange}
             />

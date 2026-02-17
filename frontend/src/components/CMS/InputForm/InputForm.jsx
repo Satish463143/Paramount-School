@@ -60,3 +60,33 @@ export const StatusComponent = ({control,name,errMsg,required})=>{
         </>
     )
 }
+export const PriorityComponent = ({control,name,errMsg,required})=>{
+    return(
+        <>
+            <SelectComponent 
+                options ={
+                    [{label:"High", value:"high"},{label:"Normal", value:"normal"}]
+                }
+                control={control}
+                name={name}
+                errMsg={errMsg}
+                required={required}
+            />
+        </>
+    )
+}
+export const NoticeCategoryComponent = ({control,name,errMsg,required})=>{
+    return(
+        <>
+            <SelectComponent 
+                options ={
+                    [{label:"Academic", value:"academic"},{label:"Administrative", value:"administrative"},{label:"Events", value:"events"},{label:"Policy", value:"policy"}]
+                }
+                control={control}
+                name={name}
+                errMsg={errMsg}
+                required={required}
+            />
+        </>
+    )
+}

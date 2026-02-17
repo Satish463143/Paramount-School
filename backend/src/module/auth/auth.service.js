@@ -3,14 +3,15 @@ const userModel = require("./user.model");
 class AuthService{
     async getSingleUserByFilter(filter){
         try{
-            const user = await userModel.findOne(filter);
-            if(!user){
-                throw new Error("User not found");
-            }
-            return user;
-        
-        }catch(exception){
-            throw(exception)
+            const userDetails = await userModel.findOne(filter);
+                if(userDetails){
+                    return userDetails
+                }else{
+                    throw {status:404, message:"Credentials do not match"}
+                }
+        }
+        catch(exception){
+           throw exception
         }
     }
 

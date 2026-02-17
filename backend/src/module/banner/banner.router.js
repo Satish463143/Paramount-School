@@ -14,6 +14,8 @@ router.route('/')
     ]),persistAllToS3, bodyValidator(bannerDTO), bannerController.create )
     .get(loginCheck, hasPermission("admin"), bannerController.index)
 
+// Specific routes must come before parameterized routes
+router.get('/listForHome', bannerController.listForHome)
 
 router.route('/:id')
     .get(loginCheck, hasPermission("admin"), bannerController.showById)
@@ -21,7 +23,5 @@ router.route('/:id')
         {name:"image", maxCount:1}
     ]), persistAllToS3, bodyValidator(bannerDTO), bannerController.update)
     .delete(loginCheck, hasPermission("admin"), bannerController.delete)
-
-router.get('/listForHome', bannerController.listForHome)
 
 module.exports = router

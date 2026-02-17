@@ -21,15 +21,15 @@ class BannerController  {
     }
     index = async(req,res,next)=>{
         try{
-            const page= req.query.page || 1
-            const limits = req.query.limit || 10
+            const page = parseInt(req.query.page) || 1
+            const limits = parseInt(req.query.limit) || 10
             const skip = (page-1)*limits
 
             const filter = {}
             if(req.query.search){
                 filter.headline = new RegExp(req.query.search, 'i')
             }
-            const [count , data] = await bannerService.listALL({filter, skip, limits})
+            const {count , data}= await bannerService.listALL({filter, skip, limits})
 
             res.json({
                 result:data,
@@ -58,7 +58,6 @@ class BannerController  {
 
         }catch(exception){
             console.log(exception)
-            next(exception)
         }
     }
     showById = async(req,res,next)=>{
@@ -115,7 +114,7 @@ class BannerController  {
             res.json({
                 meta:null,
                 message:"Banner list for home",
-                data:response
+                result:response
             })
 
         }catch(exception){

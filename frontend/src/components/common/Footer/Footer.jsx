@@ -18,18 +18,18 @@ const Footer = () => {
 
   const footerLinks = {
     quickLinks: [
-      { name: 'Home', href: '#' },
-      { name: 'About Us', href: '#' },
-      { name: 'Admissions', href: '#' },
-      { name: 'Academic Life', href: '#' },
-      { name: 'Latest News', href: '#' },
+      { name: 'Home', href: '/' },
+      { name: 'About Us', href: '/about-us' },
+      { name: 'Admissions', href: '/admissions' },
+      { name: 'Academic Life', href: '/academics' },
+      { name: 'Latest News', href: '/events-notices' },
     ],
     programs: [
-      { name: 'Pre-Primary', href: '#' },
-      { name: 'Primary School', href: '#' },
-      { name: 'Secondary School', href: '#' },
-      { name: 'Extracurriculars', href: '#' },
-      { name: 'Sports Academy', href: '#' },
+      { name: 'Pre-Primary', href: '/academics#academic-levels' },
+      { name: 'Primary School', href: '/academics#academic-levels' },
+      { name: 'Secondary School', href: '/academics#academic-levels' },
+      { name: 'Extracurriculars', href: '/academics#co-curricular' },
+      { name: 'Sports Academy', href: '/academics#co-curricular' },
     ]
   };
 

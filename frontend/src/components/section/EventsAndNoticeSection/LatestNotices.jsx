@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import { useListAllQuery } from '@/api/notice.api';
+import React, { useState,useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const noticesData = [
   {
@@ -53,16 +55,45 @@ const noticesData = [
   },
 ];
 
-const LatestNotices = () => {
-  const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Academic', 'Administrative', 'Events', 'Policy'];
+// Utility function to format day
+const getDay = (dateString) => {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  return date.getDate().toString().padStart(2, '0');
+};
 
-  const filteredNotices = noticesData.filter((notice) => 
+// Utility function to format month and year
+const getMonthYear = (dateString) => {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+};
+
+const LatestNotices = () => {
+  const {data, isLoading, error} = useListAllQuery();
+  const location = useLocation();
+
+  const noticeList = data?.result || []
+  console.log(noticeList)
+  
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
+
+  const [filter, setFilter] = useState('All');
+  const categories = ['All', 'academic', 'administrative', 'events', 'policy'];
+
+  const filteredNotices = noticeList.filter((notice) => 
     filter === 'All' || notice.category === filter
   );
 
   return (
-    <section className="py-32 bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300 relative overflow-hidden">
+    <section id="latest-notices" className="py-32 bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300 relative overflow-hidden">
       {/* Background Decor - Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
@@ -112,18 +143,18 @@ const LatestNotices = () => {
               data-aos-delay={index * 100}
             >
               {/* The "Notice Pin" accent */}
-              <div className={`absolute -top-3 left-10 w-6 h-6 rounded-full bg-${notice.color}-500/20 border-2 border-${notice.color}-500 z-30 shadow-lg shadow-${notice.color}-500/20 group-hover:scale-125 transition-transform`} />
+              <div className={`absolute -top-3 left-10 w-6 h-6 rounded-full bg-sky-500/20 border-2 border-sky-500 z-30 shadow-lg shadow-sky-500/20 group-hover:scale-125 transition-transform`} />
 
               <div className="relative h-full bg-white dark:bg-slate-950 p-8 md:p-10 rounded-[3rem] border border-slate-100 dark:border-slate-800 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 flex flex-col overflow-hidden">
                 
                 {/* Floating Date Badge */}
                 <div className="flex items-start justify-between mb-8">
                   <div className="flex flex-col">
-                    <span className={`text-4xl font-black text-${notice.color}-600 dark:text-${notice.color}-400 leading-none tracking-tighter`}>
-                      {notice.date.split(' ')[0]}
+                    <span className={`text-4xl font-black text-sky-600 dark:text-sky-400 leading-none tracking-tighter`}>
+                      {getDay(notice.date)}
                     </span>
                     <span className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mt-1">
-                      {notice.date.split(' ')[1]} {notice.year}
+                      {getMonthYear(notice.date)}
                     </span>
                   </div>
                   
@@ -131,7 +162,7 @@ const LatestNotices = () => {
                   <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${
                     notice.priority === 'high' 
                       ? 'bg-rose-500/10 text-rose-600 border border-rose-500/20' 
-                      : `bg-${notice.color}-500/10 text-${notice.color}-600 border border-${notice.color}-500/20`
+                      : `bg-sky-500/10 text-sky-600 border border-sky-500/20`
                   }`}>
                     {notice.priority === 'high' ? 'Priority' : notice.category}
                   </span>
@@ -148,7 +179,7 @@ const LatestNotices = () => {
                 </div>
 
                 {/* Decorative Bottom Corner Element */}
-                <div className={`absolute -bottom-10 -right-10 w-32 h-32 bg-${notice.color}-500 opacity-[0.03] rounded-full blur-2xl group-hover:opacity-10 transition-opacity`} />
+                <div className={`absolute -bottom-10 -right-10 w-32 h-32 bg-sky-500 opacity-[0.03] rounded-full blur-2xl group-hover:opacity-10 transition-opacity`} />
               </div>
 
               {/* High Priority Ripple Effect */}

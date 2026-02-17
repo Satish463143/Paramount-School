@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { Palette, Trophy, Globe, Lightbulb } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const programs = [
     {
@@ -33,6 +34,16 @@ const programs = [
 ];
 
 const CoCurricular = () => {
+     const location = useLocation();
+  
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
     return (
         <section className="py-24 md:py-32 bg-muted/20 relative overflow-hidden" id="co-curricular">
             

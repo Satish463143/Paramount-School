@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../../common/Title/Title";
 import Button from "../../common/Button/Button";
+import { Link } from "react-router-dom";
 import { 
   Beaker, 
   Book, 
@@ -75,8 +76,9 @@ const Facilities = () => {
                   {facility.description}
                 </p>
                 <div className="flex items-center gap-2 text-primary text-xs font-bold tracking-wider group/btn cursor-pointer">
-                  VIEW DETAILS
+                  <Link to="/facilities">VIEW DETAILS</Link>
                   <ArrowRight size={14} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
+                  
                 </div>
               </div>
 

@@ -54,7 +54,7 @@ class AuthController {
     }
     async logout(req,res,next){
         try {
-            const userId = req.user_id
+            const userId = req.authUser._id
             await userModel.findByIdAndUpdate(userId, {
                 token:null,
                 refreshToken:null
@@ -71,7 +71,7 @@ class AuthController {
     }
     async getMe(req, res, next) {
         try {
-            const userId = req.user_id;
+            const userId = req.authUser._id;
             const user = await userModel.findById(userId);
             if (!user) {
                 throw { status: 404, message: "User not found" };

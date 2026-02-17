@@ -1,27 +1,26 @@
 import React, { useState } from "react";
 import Title from "../../common/Title/Title";
 import { Maximize2, X } from "lucide-react";
-
-const ROW1_IMAGES = [
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2670&auto=format&fit=crop", // Classroom
-  "https://images.unsplash.com/photo-1544648123-52ee3bd63177?q=80&w=2070&auto=format&fit=crop", // Computer Lab
-  "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop", // Library
-  "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop", // Science Lab
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop", // Graduation
-  "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=2070&auto=format&fit=crop", // Group activity
-];
-
-const ROW2_IMAGES = [
-  "https://images.unsplash.com/photo-1519766428956-611c9ad8d1ca?q=80&w=2070&auto=format&fit=crop", // Sports
-  "https://images.unsplash.com/photo-1514525253361-beed43519173?q=80&w=2070&auto=format&fit=crop", // Culture
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop", // Learning
-  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop", // Presentation
-  "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop", // Kids playing
-  "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop", // Community
-];
+import { useListAllQuery } from "@/api/gallery.api";
 
 const Gallery = () => {
+  const [page] = useState(1)
+  const [limit] = useState(1000)
+  const [search] = useState('')
+  const { data: galleriesData, isLoading: galleriesLoading, error: galleriesError } = useListAllQuery({ page, limit, search })
+  
+  const galleries = galleriesData?.result || []
+  const allImages = galleries.map(item => item.image).filter(Boolean)
+  
+  // Split images into two rows
+  const midPoint = Math.ceil(allImages.length / 2)
+  const row1Images = allImages.slice(0, midPoint)
+  const row2Images = allImages.slice(midPoint)
+
   const [selectedImage, setSelectedImage] = useState(null);
+
+  if (galleriesLoading) return <div className="py-24 text-center">Loading gallery...</div>
+  if (allImages.length === 0) return null // Hide section if no images
 
   const MarqueeRow = ({ images, direction = "left" }) => {
     // Duplicate images for infinite loop
@@ -66,8 +65,8 @@ const Gallery = () => {
       </div>
 
       <div className="space-y-4">
-        <MarqueeRow images={ROW1_IMAGES} direction="left" />
-        <MarqueeRow images={ROW2_IMAGES} direction="right" />
+        {row1Images.length > 0 && <MarqueeRow images={row1Images} direction="left" />}
+        {row2Images.length > 0 && <MarqueeRow images={row2Images} direction="right" />}
       </div>
 
       {/* Lightbox Modal */}

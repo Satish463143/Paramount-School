@@ -4,19 +4,25 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { TextInputComponent, StatusComponent } from '../InputForm/InputForm'
 
-const BannerForm = ({submitEvent,loading,detail=null}) => {
+const BannerForm = ({submitEvent,loading,value,detail=null}) => {
+    const [imagePreview, setImagePreview] = useState(null);
+
+    // Make image optional if we're editing (detail exists)
     const bannerDTO = Yup.object({
         headline: Yup.string().min(3).max(50).required(),
         primaryCta: Yup.string().min(3).max(50).required(),
         primaryCtaLink: Yup.string().min(3).max(50).required(),
-        secondaryCta: Yup.string().min(3).max(50).nullable().optional().default(null),
-        secondaryCtaLink: Yup.string().min(3).max(50).nullable().optional().default(null),
+        secondaryCta: Yup.string().nullable().optional().default(null),
+        secondaryCtaLink: Yup.string().nullable().optional().default(null),
         subheadline: Yup.string().min(3).max(50).nullable().optional().default(null),
         status: Yup.object({
             label: Yup.string().matches(/^(Active|Inactive)$/),
             value: Yup.string().matches(/^(active|inactive)$/).required()
         }).required(),
-        image: Yup.mixed().required("Image is required"),
+        // Image is required only when adding (no detail), optional when editing
+        image: detail 
+            ? Yup.mixed().optional() 
+            : Yup.mixed().required("Image is required"),
     });
      
     const { control, handleSubmit, setValue,  formState: { errors } } = useForm({
@@ -33,9 +39,24 @@ const BannerForm = ({submitEvent,loading,detail=null}) => {
             setValue("primaryCtaLink", detail.primaryCtaLink)
             setValue("secondaryCta", detail.secondaryCta)
             setValue("secondaryCtaLink", detail.secondaryCtaLink)
-
+            // Set preview to existing image URL
+            setImagePreview(detail.image)
         }
     },[detail, setValue])
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            setValue('image', file);
+            // Create preview URL for the new file
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setImagePreview(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
   return (
     <form onSubmit={handleSubmit(submitEvent)}>
         <h3>Content</h3>
@@ -76,7 +97,7 @@ const BannerForm = ({submitEvent,loading,detail=null}) => {
                 <TextInputComponent
                     name="primaryCtaLink"
                     control={control}
-                    type='text'
+                    type='link'
                     placeholder='https://example.com'
                     errMsg={errors?.primaryCtaLink?.message}
                     required:true
@@ -97,7 +118,7 @@ const BannerForm = ({submitEvent,loading,detail=null}) => {
                 <TextInputComponent
                     name="secondaryCtaLink"
                     control={control}
-                    type='text'
+                    type='link'
                     placeholder='https://example.com'
                     errMsg={errors?.secondaryCtaLink?.message}
                 />
@@ -112,20 +133,33 @@ const BannerForm = ({submitEvent,loading,detail=null}) => {
                 />
             </div>            
              <div>
-                <label htmlFor="image"> Image</label><br />
+                <label htmlFor="image">Image {detail && "(Leave empty to keep current image)"}</label><br />
                 <input
                     type='file'
-                    onChange={(e) => {
-                        const image = e.target.files['0']
-                        setValue('image', image)
-                    }}
+                    accept="image/*"
+                    onChange={handleImageChange}
                 /><br />
+                {imagePreview && (
+                    <div style={{ marginTop: '10px' }}>
+                        <img 
+                            src={imagePreview} 
+                            alt="Preview" 
+                            style={{ 
+                                maxWidth: '200px', 
+                                maxHeight: '150px', 
+                                objectFit: 'cover',
+                                borderRadius: '4px',
+                                border: '1px solid #ddd'
+                            }} 
+                        />
+                    </div>
+                )}
                 {errors?.image?.message && <p style={{ color: 'red' }}>{errors?.image?.message}</p>}
             </div>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <input className='submit_btn' type="submit" value="Update Banner" disabled={loading} />
+            <input className='submit_btn' type="submit" value={value} disabled={loading} />
         </div>
     </form>
   )

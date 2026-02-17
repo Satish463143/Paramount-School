@@ -3,7 +3,7 @@ import { Menu, X, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "../Theme/ThemeToggle";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -17,6 +17,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
@@ -41,6 +43,11 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  useEffect(() => {
+    const path = location.pathname;
+    const link = navLinks.find((link) => link.href === path);
+    setActiveLink(link ? link.label : "Home");
+  }, [location]);
 
   return (
     <nav
@@ -52,7 +59,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <div className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-primary text-primary-foreground transition-transform group-hover:scale-105">
               <GraduationCap className="h-5 w-5 lg:h-6 lg:w-6" />
             </div>
@@ -64,14 +71,14 @@ const Navbar = () => {
                 Learning is Fun
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 onClick={() => setActiveLink(link.label)}
                 className={cn(
                   "px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 relative",
@@ -84,7 +91,7 @@ const Navbar = () => {
                 )}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -97,7 +104,7 @@ const Navbar = () => {
             <Button
               className="hidden sm:flex bg-cta-bg hover:bg-cta-bg-hover text-cta-text font-medium px-4 lg:px-6 h-10 rounded-full transition-all duration-200 hover:scale-[1.02] shadow-sm"
             >
-              Apply for Admission
+              <Link to="/admissions">Apply for Admission</Link>
             </Button>
 
             {/* Mobile Menu Toggle */}

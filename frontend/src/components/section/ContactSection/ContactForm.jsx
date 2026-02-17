@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle2, User, Mail, MessageSquare, Phone } from 'lucide-react';
+import { useCreateMutation } from '@/api/contact.api';
 
 const ContactForm = () => {
+  const [createContact]= useCreateMutation()
   const [formState, setFormState] = useState('idle'); // idle, sending, success
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
+    number: '',
     subject: '',
     message: '',
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setFormState('sending');
-    // Simulate API call
+    await createContact(formData)
     setTimeout(() => {
       setFormState('success');
       setTimeout(() => setFormState('idle'), 5000);
@@ -109,7 +111,7 @@ const ContactForm = () => {
                                type="tel" 
                                placeholder="+91 00000 00000" 
                                className={`${inputClasses} pl-16`}
-                               onChange={e => setFormData({...formData, phone: e.target.value})}
+                               onChange={e => setFormData({...formData, number: e.target.value})}
                              />
                           </div>
                        </div>

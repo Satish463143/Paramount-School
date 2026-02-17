@@ -11,7 +11,7 @@ export const getLoggedInUser = createAsyncThunk(
             });
             if (!response.ok) throw new Error("Failed to fetch user data");
             const data = await response.json();
-            return data.result; 
+            return data.result; // Assuming the structure matches your API response
         } catch (exception) {
             console.error(exception);
             return rejectWithValue(exception.message);
@@ -23,29 +23,21 @@ const UserSlicer = createSlice({
     name:'User',
     initialState:{
         loggedInUser:null,
-        userLoading: true,
     },
     reducers:{
         setLoggedInUser:(state,action)=>{
             state.loggedInUser = action.payload
-            state.userLoading = false
         },
         logoutUser: (state) => {
             state.loggedInUser = null; 
-            state.userLoading = false;
         }
     },
     extraReducers:(builder)=>{
-        builder.addCase(getLoggedInUser.pending,(state)=>{
-            state.userLoading = true
-        })
         builder.addCase(getLoggedInUser.fulfilled,(state,action)=>{
             state.loggedInUser = action.payload
-            state.userLoading = false
         })
         builder.addCase(getLoggedInUser.rejected,(state)=>{
             state.loggedInUser = null
-            state.userLoading = false
         })
     }
 })

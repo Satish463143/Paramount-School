@@ -19,6 +19,6 @@ router.route('/:id')
     .put(loginCheck,hasPermission("admin"), setPath("team"),uplaodFile(FileFilterType.IMAGE).fields([
         {name:"image", maxCount:1}
     ]),persistAllToS3, bodyValidator(TeamDTO), teamController.update)
-    .delete(loginCheck,hasPermission("admin"), teamController.deleteEvent)
+    .delete(loginCheck,hasPermission("admin"), teamController.delete)
 
 module.exports = router

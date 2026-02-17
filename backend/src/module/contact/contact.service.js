@@ -15,16 +15,16 @@ class ContactService{
     getAllContact = async (filter,skip,limit)=>{
         try {
             const query = Contact.find(filter)
-                .sort({_id:-1})
-                .skip(skip)
                 .limit(limit)
+                .skip(skip)
+                .sort({createdAt:-1})
                 .lean()
             
             const [count, data] = await Promise.all([
                 Contact.countDocuments(filter),
                 query
             ])
-            return {count,data}
+            return {count, data}
             
         } catch (error) {
             throw error

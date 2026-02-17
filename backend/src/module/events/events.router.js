@@ -11,14 +11,14 @@ const router = require("express").Router();
 router.route('/')
     .post(loginCheck,hasPermission("admin"), setPath("events"),uplaodFile(FileFilterType.IMAGE).fields([
         {name:"image", maxCount:1}
-    ]),persistAllToS3, bodyValidator(EventDTO), eventController.createEvent)
-    .get( eventController.getAllEvent)
+    ]),persistAllToS3, bodyValidator(EventDTO), eventController.create)
+    .get( eventController.index)
 
 router.route('/:id')
-    .get(loginCheck,hasPermission("admin"),eventController.getEventById)
+    .get(loginCheck,hasPermission("admin"),eventController.showById)
     .put(loginCheck,hasPermission("admin"), setPath("events"),uplaodFile(FileFilterType.IMAGE).fields([
         {name:"image", maxCount:1}
-    ]),persistAllToS3, bodyValidator(EventDTO), eventController.updateEvent)
-    .delete(loginCheck,hasPermission("admin"), eventController.deleteEvent)
+    ]),persistAllToS3, bodyValidator(EventDTO), eventController.update)
+    .delete(loginCheck,hasPermission("admin"), eventController.delete)
 
 module.exports = router
