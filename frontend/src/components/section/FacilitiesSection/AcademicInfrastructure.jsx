@@ -1,35 +1,34 @@
 import React from 'react';
-import schoolImg from '@/assets/school.jpg';
 
 const infrastructureData = [
   {
     id: '01',
-    title: 'Classrooms',
-    description: 'Our classrooms are designed to be bright, airy, and conducive to focused learning. Each space is organized to minimize distractions and maximize student-teacher interaction.',
+    title: 'Safe & Secure Campus',
+    description: 'The school premises are designed to ensure safety and discipline with boundary walls, controlled entry system, CCTV surveillance, supervised environment, and structured monitoring to maintain a peaceful learning atmosphere.',
     image: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=1200&auto=format&fit=crop',
   },
   {
     id: '02',
-    title: 'Smart Classrooms',
-    description: 'Integrated with modern interactive boards and digital tools, these rooms transform traditional lessons into engaging multimedia experiences that cater to diverse learning styles.',
+    title: 'Science Laboratories',
+    description: 'Fully equipped laboratories supporting practical learning in Physics, Chemistry, and Biology for Grades 6–12. Includes modern scientific instruments, safety equipment, practical experiment materials, and guided lab sessions under trained teachers.',
     image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop',
   },
   {
     id: '03',
-    title: 'Science Laboratories',
-    description: 'Equipped with high-standard safety gear and modern scientific apparatus, our labs encourage hands-on discovery and nurture a spirit of empirical inquiry among students.',
+    title: 'ICT & Computer Lab',
+    description: 'Modern computer lab with updated systems and internet access supporting practical computer classes, ICT training from basic to advanced levels, research projects, multimedia learning tools, and digital presentation practice.',
     image: 'https://images.unsplash.com/photo-1563906480205-6de57492f1fb?q=80&w=1200&auto=format&fit=crop',
   },
   {
     id: '04',
-    title: 'Computer Labs',
-    description: 'Featuring the latest workstations and high-speed connectivity, our tech labs ensure that every student builds essential digital literacy in a structured and guided environment.',
+    title: 'Library & Resource Center',
+    description: 'Well-managed library providing a wide collection of academic books, reference materials, storybooks, novels, newspapers, magazines, and dedicated reading space to promote independent learning and research habits.',
     image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200&auto=format&fit=crop',
   },
   {
     id: '05',
-    title: 'Library & Reading Room',
-    description: 'A sanctuary for knowledge, our library offers a vast collection of academic resources in a quiet, climate-controlled space designed for deep research and reading.',
+    title: 'Sports & Physical Education Facilities',
+    description: 'Playground for football and outdoor games, basketball and volleyball courts, indoor games, athletics training, and annual sports events promoting teamwork, discipline, physical fitness, and leadership development.',
     image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop',
   },
 ];

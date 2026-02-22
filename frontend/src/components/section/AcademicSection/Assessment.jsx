@@ -4,23 +4,23 @@ import { ClipboardCheck, Eye, TrendingUp, MessageSquare } from 'lucide-react';
 const assessmentAspects = [
     {
         icon: <Eye size={24} />,
-        title: "Continuous Assessment & Observation",
-        description: "Learning is monitored daily through classroom participation, assignments, and ongoing observation. Teachers track each student's understanding, engagement, and progress throughout the academic year, ensuring no learning gap goes unnoticed."
+        title: "Continuous Evaluation System (CES)",
+        description: "At the primary level, student progress is assessed through classwork, assignments, presentations, participation, and regular observation to ensure consistent learning development."
     },
     {
         icon: <ClipboardCheck size={24} />,
-        title: "Periodic Examinations & Evaluations",
-        description: "Formal assessments are conducted at regular intervals to measure subject mastery and conceptual understanding. These evaluations are designed to be fair, age-appropriate, and aligned with the curriculum, providing a clear picture of academic progress."
+        title: "Theory & Practical Balance",
+        description: "Lower secondary follows a 50% theory and 50% practical model, while secondary and higher secondary follow a 75% theory and 25% practical structure as per NEB guidelines."
     },
     {
         icon: <TrendingUp size={24} />,
-        title: "Balanced Focus on Understanding, Skills & Participation",
-        description: "Assessment goes beyond test scores. We evaluate critical thinking, problem-solving abilities, creativity, collaboration, and active participation—recognizing that true learning encompasses knowledge, skills, and character development."
+        title: "Laboratory & Project-Based Assessment",
+        description: "Students are evaluated through laboratory experiments, project work, research assignments, and applied learning activities to strengthen practical understanding."
     },
     {
         icon: <MessageSquare size={24} />,
-        title: "Constructive Feedback & Progress Tracking",
-        description: "Students and parents receive regular, detailed feedback that highlights strengths and identifies areas for improvement. Progress reports are shared transparently, with personalized guidance to support each child's academic journey."
+        title: "Transparent Evaluation & Board Preparation",
+        description: "Assessment aligns with the National Examination Board curriculum, ensuring structured academic preparation, revision programs, and clear performance evaluation."
     }
 ];
 

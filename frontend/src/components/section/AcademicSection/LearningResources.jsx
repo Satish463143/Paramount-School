@@ -3,32 +3,32 @@ import { Layout, Beaker, Library, Laptop } from 'lucide-react';
 
 const resources = [
   {
-    title: "Classrooms & Learning Spaces",
-    description: "Our classrooms are designed as focused environments that support both instruction and interaction. Every space is organized to ensure students remain engaged and comfortable throughout the school day.",
+    title: "Safe & Structured Learning Environment",
+    description: "Classrooms operate within a supervised and disciplined campus supported by controlled entry systems and CCTV surveillance to ensure a focused academic atmosphere.",
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2673&auto=format&fit=crop",
     icon: <Layout size={24} />,
     tag: "ENVIRONMENT"
   },
   {
-    title: "Science & Computer Laboratories",
-    description: "Fully equipped laboratories provide students with the practical resources needed for scientific exploration and digital literacy. These spaces are managed to ensure safe and purposeful hands-on learning.",
+    title: "Science & ICT Laboratories",
+    description: "Fully equipped science laboratories for Physics, Chemistry, and Biology, along with an ICT & Computer Lab supporting practical training, internet access, and multimedia learning.",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2572&auto=format&fit=crop",
     icon: <Beaker size={24} />,
     tag: "EXPLORE"
   },
   {
-    title: "Library & Reading Resources",
-    description: "The library serves as a quiet hub for research and independent discovery. With a diverse collection of reading materials, students are encouraged to deepen their academic knowledge beyond the classroom.",
+    title: "Library & Resource Center",
+    description: "A well-managed library providing academic books, reference materials, newspapers, magazines, and dedicated reading space for independent study and research.",
     image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2670&auto=format&fit=crop",
     icon: <Library size={24} />,
     tag: "KNOWLEDGE"
   },
   {
-    title: "Digital Learning Tools & Support",
-    description: "We integrate modern digital tools to enhance the teaching process and provide students with access to global information. Technology is used responsibly to support diverse learning styles and skills.",
+    title: "Outdoor & Co-Curricular Facilities",
+    description: "Outdoor learning spaces, sports grounds, music and art facilities, and event areas support experiential learning and holistic student development.",
     image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2574&auto=format&fit=crop",
     icon: <Laptop size={24} />,
-    tag: "DIGITAL"
+    tag: "DEVELOPMENT"
   }
 ];
 

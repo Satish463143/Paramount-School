@@ -47,10 +47,10 @@ const Message = () => {
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2">
-                           Mrs. Sarah Johnson
+                           Mukunda Pd. Pandey
                         </h2>
                         <h3 className="text-lg text-secondary font-medium mb-8">
-                            Principal, Paramount School
+                            Principal, Paramount Academy
                         </h3>
 
                         <div className="relative">
@@ -58,22 +58,15 @@ const Message = () => {
                             
                             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed relative z-10">
                                 <p>
-                                    "Welcome to our Paramount family! Every morning, when I see our students walk through the gates with their bright smiles and curious eyes, I am reminded of the incredible trust you place in us."
+                                    “At Paramount Academy, we are committed to academic excellence, discipline, and holistic development. Guided by our philosophy of ‘Quality Education through Learning and Doing,’ we encourage students to grow intellectually and morally in a structured academic environment.”
                                 </p>
                                 <p>
-                                    "We believe that a school should be more than just a place to learn; it should be a second home where children feel safe to ask questions, make mistakes, and grow into kind, confident individuals. Our hearts are as invested in their journey as our minds."
+                                    “Our programs from Nursery to Grade Twelve follow the National Examination Board guidelines, combining theory and practical learning. With dedicated teachers, continuous evaluation, and strong institutional values, we strive to shape responsible, confident, and capable individuals.”
                                 </p>
                                 <p>
                                     "Together, let's build a future filled with hope, joy, and endless possibilities for your little ones."
                                 </p>
                             </div>
-                        </div>
-
-                        {/* Signature (Optional visual touch) */}
-                        <div className="mt-8 pt-6 border-t border-border/40">
-                            <p className="font-handwriting text-2xl text-foreground opacity-80 rotate-[-2deg]">
-                                Sarah Johnson
-                            </p>
                         </div>
 
                     </div>

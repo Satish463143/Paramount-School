@@ -1,33 +1,33 @@
 import React from 'react';
-import { GraduationCap, Heart, Shield, Sparkles } from 'lucide-react';
+import {  Heart, Sparkles } from 'lucide-react';
 
 const reasons = [
     {
-        title: "Individual Attention & Care",
-        description: "Every child is unique, and we honor that. Our small class sizes ensure each student receives personalized guidance, allowing teachers to understand their strengths, challenges, and learning styles. We don't just teach—we mentor, support, and celebrate every milestone.",
+        title: "NEB-Aligned Academic Programs",
+        description: "Structured education from Nursery to Grade Twelve under the National Examination Board, with balanced integration of theory and practical learning models.",
         image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop",
-        imageAlt: "Teacher giving individual attention to student",
+        imageAlt: "Students engaged in structured classroom learning",
         position: "left"
     },
     {
-        title: "Dedicated & Qualified Teachers",
-        description: "Our educators are more than instructors—they are passionate mentors committed to your child's growth. With advanced qualifications and years of experience, they bring warmth, expertise, and genuine care to every classroom. Your child will be guided by teachers who truly invest in their success.",
+        title: "Qualified & Dedicated Faculty",
+        description: "A team of experienced and committed teachers who guide students through disciplined instruction, continuous evaluation, and academic mentorship.",
         image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=2574&auto=format&fit=crop",
-        imageAlt: "Qualified teachers in classroom setting",
+        imageAlt: "Professional teachers conducting classroom session",
         position: "right"
     },
     {
-        title: "Balanced Academics & Values",
-        description: "We believe education extends beyond textbooks. While academic excellence is our foundation, we equally prioritize character development, critical thinking, and emotional intelligence. Your child will grow into a well-rounded individual prepared for both academic challenges and life's complexities.",
+        title: "Balanced Theory & Practical Learning",
+        description: "Implementation of 50% practical learning in lower grades and 75% theory structure in higher grades, supported by laboratory work and research-based assignments.",
         image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
-        imageAlt: "Students engaged in balanced learning activities",
+        imageAlt: "Students participating in practical laboratory activity",
         position: "left"
     },
     {
-        title: "Safe & Nurturing Environment",
-        description: "Your peace of mind matters to us. Our campus is designed with safety as a priority—from secure facilities to trained staff who maintain a watchful, caring presence. We've created a space where children feel protected, valued, and free to explore their potential without fear.",
+        title: "Safe & Disciplined Campus Environment",
+        description: "A secure campus with CCTV surveillance, controlled entry systems, and structured supervision to ensure a focused and protected learning atmosphere.",
         image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2673&auto=format&fit=crop",
-        imageAlt: "Safe and welcoming school environment",
+        imageAlt: "Safe and structured school campus environment",
         position: "right"
     }
 ];

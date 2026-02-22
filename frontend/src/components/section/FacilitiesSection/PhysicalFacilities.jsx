@@ -1,31 +1,29 @@
 import React from 'react';
-import Title from '@/components/common/Title/Title';
-import schoolImg from '@/assets/school.jpg';
 
 const sportsAreas = [
   {
     title: 'Outdoor Playground',
-    description: 'A spacious, safe arena for group play and foundation sports where students learn the basics of teamwork.',
+    description: 'Spacious playground for football and various outdoor games that promote teamwork, discipline, and physical strength.',
     image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
-    tag: 'Active Play',
+    tag: 'Outdoor Sports',
   },
   {
-    title: 'Indoor Sports Court',
-    description: 'Disciplined training in badminton, table tennis, and aerobics in a well-ventilated, all-weather facility.',
+    title: 'Basketball & Volleyball Courts',
+    description: 'Dedicated courts for basketball and volleyball encouraging structured training, coordination, and team spirit.',
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
-    tag: 'Skill Focus',
+    tag: 'Team Games',
   },
   {
-    title: 'Organized Training',
-    description: 'Supervised coaching sessions across various disciplines to nurture competitive excellence and discipline.',
+    title: 'Indoor Games & Athletics',
+    description: 'Facilities for indoor games such as chess and table tennis along with athletics training programs for overall fitness development.',
     image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
-    tag: 'Elite Coaching',
+    tag: 'Skill Development',
   },
   {
-    title: 'PE & Fitness',
-    description: 'Structured Physical Education programs focused on holistic health, agility, and cardiovascular fitness.',
+    title: 'Physical Training & Competitions',
+    description: 'Regular physical training sessions, annual sports events, and inter-school competitions to build sportsmanship and leadership qualities.',
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
-    tag: 'Health First',
+    tag: 'Leadership & Fitness',
   },
 ];
 

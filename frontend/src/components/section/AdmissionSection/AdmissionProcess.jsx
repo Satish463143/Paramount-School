@@ -4,36 +4,36 @@ import { ClipboardCheck, FileText, Users, MailCheck, GraduationCap } from 'lucid
 const admissionSteps = [
   {
     number: "01",
-    title: "Submit Inquiry",
-    description: "Start your journey by filling out our simple online form or visiting our campus.",
+    title: "Application Submission",
+    description: "Submit the completed admission form at the school administration office during official working hours.",
     icon: <MailCheck size={24} />,
     color: "text-blue-600 bg-blue-50 dark:bg-blue-950/30 dark:text-blue-400"
   },
   {
     number: "02",
-    title: "Document Review",
-    description: "Provide necessary academic records and identity documents for verification.",
+    title: "Entrance Assessment",
+    description: "Students (Grade 1 and above) may appear for an entrance examination to assess academic readiness as per NEB guidelines.",
     icon: <FileText size={24} />,
     color: "text-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 dark:text-emerald-400"
   },
   {
     number: "03",
-    title: "Student Interaction",
-    description: "A friendly meeting to understand the student's background and potential.",
+    title: "Interaction / Counseling",
+    description: "Interaction session with student and parents. For Grade 11–12, counseling is provided for Science or Management stream selection.",
     icon: <Users size={24} />,
     color: "text-amber-600 bg-amber-50 dark:bg-amber-950/30 dark:text-amber-400"
   },
   {
     number: "04",
-    title: "Admission Offer",
-    description: "Receive a formal confirmation once the assessment is successfully complete.",
+    title: "Document Verification",
+    description: "Submission and verification of required academic documents including mark sheets, transfer certificates, and other necessary records.",
     icon: <ClipboardCheck size={24} />,
     color: "text-rose-600 bg-rose-50 dark:bg-rose-950/30 dark:text-rose-400"
   },
   {
     number: "05",
-    title: "Final Enrollment",
-    description: "Complete the registration process and officially join the Paramount family.",
+    title: "Admission Confirmation",
+    description: "Admission is confirmed based on entrance results, eligibility criteria, seat availability, and fee clearance.",
     icon: <GraduationCap size={24} />,
     color: "text-primary bg-primary/5 dark:bg-primary/20 dark:text-primary"
   }

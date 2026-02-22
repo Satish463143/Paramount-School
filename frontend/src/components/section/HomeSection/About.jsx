@@ -2,16 +2,16 @@ import { Target, Eye, Heart, CheckCircle } from "lucide-react";
 import school from "../../../assets/school.jpg"
 const About = () => {
   const values = [
-    { icon: Target, label: "Academic Excellence" },
-    { icon: Heart, label: "Character Building" },
-    { icon: Eye, label: "Holistic Growth" },
-  ];
+  { icon: Target, label: "Quality Education through Learning & Doing" },
+  { icon: Heart, label: "Strong Human Values & Discipline" },
+  { icon: Eye, label: "Holistic Student Development" },
+];
   const highlights = [
-    "Child-centered learning approach",
-    "Emphasis on cultural values and ethics",
-    "Modern facilities with traditional values",
-    "Experienced and caring faculty",
-  ];
+  "Montessori-Based Early Childhood Education",
+  "Continuous Evaluation & Practical Learning Model",
+  "Science & Management Streams (Grades 11–12)",
+  "Experienced, Qualified & Dedicated Faculty",
+];
   return (
     <section className="py-16 lg:py-24 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -56,10 +56,13 @@ const About = () => {
               data-aos="fade-left"
               data-aos-delay="200"
             >
-              Since 2001, Paramount Academy has been nurturing young minds with a 
-              perfect blend of modern education and traditional values. We believe 
-              that every child is unique and deserves an environment where they can 
-              discover their potential and grow into responsible citizens.
+              Paramount Academy is a center of academic excellence offering classes from K–12 under the regulations of the National Examination Board. Located in Ward No. 8, Tokha Municipality, Gongabu Baniyatar, the school provides a peaceful, safe, and education-friendly environment.
+
+                Guided by our motto “Quality Education through Learning and Doing,” we believe education should go beyond textbooks. Our approach encourages students not only to gain knowledge but to apply what they learn in real-life situations.
+
+                We follow a student-centered teaching model focused on holistic development — intellectual, social, emotional, moral, and physical. From Montessori-based Early Childhood education to Secondary and Higher Secondary programs, we ensure nationally recognized education supported by modern teaching methodologies.
+
+                At Paramount Academy, our mission is to shape responsible, ethical, and capable citizens who contribute positively to society.
             </p>
 
             {/* Mission & Vision */}
@@ -76,8 +79,7 @@ const About = () => {
                   <h3 className="font-bold text-foreground">Our Mission</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  To provide quality education that empowers students to achieve 
-                  academic excellence while developing strong moral values.
+                  To provide balanced, practical, and nationally recognized education that nurtures knowledge, discipline, strong human values, and prepares students not only for examinations but for life challenges and global opportunities.
                 </p>
               </div>
 
@@ -93,8 +95,7 @@ const About = () => {
                   <h3 className="font-bold text-foreground">Our Vision</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  To be a leading institution that shapes future leaders with 
-                  knowledge, character, and a sense of social responsibility.
+                  To remain committed to excellence, discipline, innovation, and holistic development while shaping responsible, competent, and forward-thinking citizens.
                 </p>
               </div>
             </div>

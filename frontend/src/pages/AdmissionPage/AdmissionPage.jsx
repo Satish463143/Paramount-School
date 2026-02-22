@@ -1,7 +1,5 @@
 import CommonBanner from '@/components/common/CommonBanner/CommonBanner'
-import ClosingCTA from '@/components/common/CTA/ClosingCTA'
 import React from 'react'
-import ImportantDates from '@/components/section/AdmissionSection/ImportantDates'
 import RequiredDocuments from '@/components/section/AdmissionSection/RequiredDocuments'
 import SchoolVisit from '@/components/section/AdmissionSection/SchoolVisit'
 import WhoCanApply from '@/components/section/AdmissionSection/WhoCanApply'
@@ -18,7 +16,6 @@ const AdmissionPage = () => {
         <WhoCanApply />
         <AdmissionProcess />
         <RequiredDocuments />
-        {/* <ImportantDates /> */}
         <SchoolVisit />
     </div>
   )

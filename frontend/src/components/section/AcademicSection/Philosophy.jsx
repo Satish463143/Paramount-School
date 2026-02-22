@@ -4,23 +4,23 @@ import { BookOpen, Users, Lightbulb, Target } from 'lucide-react';
 const philosophyAreas = [
     {
         icon: <Lightbulb size={24} />,
-        title: "Concept-Based Learning",
-        description: "We prioritize deep understanding over rote memorization. Our teachers guide students to grasp core concepts, enabling them to apply knowledge across different contexts and develop critical thinking skills that last a lifetime."
+        title: "Learning Through Doing",
+        description: "Guided by the philosophy of 'Quality Education through Learning and Doing,' students are encouraged to apply knowledge practically through activities, projects, and experiential learning."
     },
     {
         icon: <Users size={24} />,
-        title: "Student-Centered Teaching",
-        description: "Every child learns differently. Our approach adapts to individual learning styles, paces, and needs. Teachers act as facilitators, encouraging questions, discussions, and active participation in every lesson."
+        title: "Student-Centered Approach",
+        description: "Teaching is structured around active participation, interactive learning, and continuous academic engagement to support holistic student development."
     },
     {
         icon: <Target size={24} />,
-        title: "Balance of Theory & Practice",
-        description: "Learning extends beyond textbooks. We integrate hands-on activities, real-world applications, and experiential learning to ensure students understand not just the 'what,' but also the 'why' and 'how' of every subject."
+        title: "Balanced Theory & Practical Model",
+        description: "Lower levels follow a 50% theory and 50% practical structure, while secondary levels follow a 75% theory and 25% practical model under NEB guidelines."
     },
     {
         icon: <BookOpen size={24} />,
-        title: "Continuous Guidance & Feedback",
-        description: "Progress is monitored closely and compassionately. Regular assessments, constructive feedback, and personalized support ensure every student stays on track and feels confident in their academic journey."
+        title: "Continuous Evaluation System",
+        description: "Student progress is assessed through regular classwork, assignments, presentations, laboratory work, and structured evaluations aligned with the curriculum."
     }
 ];
 

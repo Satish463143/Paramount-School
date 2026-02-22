@@ -3,36 +3,36 @@ import Title from '@/components/common/Title/Title';
 
 const maintenancePillars = [
   {
-    title: 'Daily Classroom Care',
-    description: 'Every learning space undergoes deep cleaning and surface sanitization twice daily to maintain a pristine environment.',
+    title: 'Health & First Aid Facility',
+    description: 'Basic first aid support and emergency response services are available to ensure student health and immediate care when required.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     ),
   },
   {
-    title: 'Sanitary Standards',
-    description: 'Restrooms are monitored and cleaned hourly, following strict hygiene protocols and using safe, effective disinfectants.',
+    title: 'Clean Drinking Water & Sanitation',
+    description: 'The school maintains proper hygiene standards with clean drinking water and well-managed sanitation facilities for students.',
     icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 21a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12a4 4 0 0 1-4 4Zm0 0h10a4 4 0 0 0 4-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v12a4 4 0 0 0 4 4Z"/><path d="M15 3v18"/></svg>
     ),
   },
   {
-    title: 'Campus Upkeep',
-    description: 'A dedicated team ensures all infrastructure, furniture, and common areas are in top condition through regular preventative maintenance.',
+    title: 'Safe & Secure Campus',
+    description: 'Boundary walls, controlled entry system, CCTV surveillance, and supervision ensure a disciplined and secure learning environment.',
     icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg>
     ),
   },
   {
-    title: 'Eco-Waste Management',
-    description: 'Responsible waste segregation and disposal systems promote a clean surrounding while teaching students environmental care.',
+    title: 'Supervised & Monitored Environment',
+    description: 'A structured discipline and monitoring system helps maintain order, safety, and a peaceful academic atmosphere.',
     icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
     ),
   },
   {
-    title: 'Airflow & Ventilation',
-    description: 'Naturally lit and well-ventilated classrooms with optimized airflow to ensure a fresh, healthy breathing space for all.',
+    title: 'Outdoor & Community Environment',
+    description: 'Clean open spaces support outdoor learning, field activities, and community-based educational exposure.',
     icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 17.618a2 2 0 1 0 1.56 2.382"/><path d="M12.93 15.389a2 2 0 1 1 1.447 3.072"/><path d="M10 10c0-1.1-.9-2-2-2S6 8.9 6 10s.9 2 2 2h12c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2"/><path d="M14 6c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2h4c1.1 0 2-.9 2-2s-.9-2-2-2"/></svg>
     ),

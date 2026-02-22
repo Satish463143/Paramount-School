@@ -4,26 +4,25 @@ import { MessageCircle, Users, Lightbulb, Target } from 'lucide-react';
 const methodologyThemes = [
     {
         icon: <Lightbulb size={24} />,
-        title: "Concept-Based Explanation",
-        description: "Teachers begin each lesson by explaining core concepts clearly and systematically. Rather than rote memorization, students are guided to understand the 'why' behind every topic. Real-world examples and relatable contexts help make abstract ideas concrete and meaningful."
+        title: "Student-Centered Teaching",
+        description: "Instruction is structured around active participation and engagement, encouraging students to think critically and take responsibility for their learning."
     },
     {
         icon: <MessageCircle size={24} />,
-        title: "Interactive Classroom Discussions",
-        description: "Learning is a two-way process. Students are encouraged to ask questions, share observations, and participate actively in discussions. Teachers facilitate dialogue that deepens understanding and builds confidence in expressing ideas clearly and respectfully."
+        title: "Activity & Experiential Learning",
+        description: "Montessori-based methods, classroom activities, projects, and outdoor learning experiences strengthen understanding through practical exposure."
     },
     {
         icon: <Target size={24} />,
-        title: "Practical & Activity-Based Learning",
-        description: "Classroom learning extends beyond textbooks. Students engage in hands-on activities, experiments, group projects, and problem-solving exercises that reinforce theoretical knowledge through practical application and experiential discovery."
+        title: "Balanced Theory & Practical Structure",
+        description: "Grades 4–8 follow a 50% theory and 50% practical model, while secondary levels follow a 75% theory and 25% practical structure aligned with NEB guidelines."
     },
     {
         icon: <Users size={24} />,
-        title: "Continuous Teacher Guidance & Feedback",
-        description: "Progress is monitored closely and compassionately. Teachers provide regular feedback, identify learning gaps early, and offer personalized support to ensure every student stays on track and feels confident in their academic journey."
+        title: "Continuous Evaluation System",
+        description: "Regular assessments through classwork, assignments, laboratory sessions, and research projects ensure structured academic monitoring and progress."
     }
 ];
-
 const TeachingMethodology = () => {
     return (
         <section className="py-24 md:py-32 bg-background relative overflow-hidden" id="teaching-methodology">

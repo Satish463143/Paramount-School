@@ -4,50 +4,50 @@ import Title from '@/components/common/Title/Title';
 
 const facilities = [
     {
-        title: "Modern Classrooms",
-        description: "Bright, spacious classrooms equipped with smart boards and comfortable seating for an engaging learning experience.",
+        title: "Safe & Structured Campus",
+        description: "A disciplined learning environment supported by CCTV surveillance and controlled entry systems to ensure student safety.",
         image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2532&auto=format&fit=crop",
-        icon: <Building2 size={32} />,
-        color: "from-blue-400 to-cyan-300",
-        bgColor: "bg-blue-50 dark:bg-blue-900/20"
+        icon: <Shield size={32} />,
+        color: "from-red-400 to-pink-300",
+        bgColor: "bg-red-50 dark:bg-red-900/20"
     },
     {
-        title: "Science & Computer Labs",
-        description: "State-of-the-art laboratories where curiosity meets innovation, fostering hands-on learning and discovery.",
+        title: "Science Laboratories",
+        description: "Well-equipped Physics, Chemistry, and Biology laboratories that promote practical experiments and research-based learning.",
         image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2670&auto=format&fit=crop",
         icon: <FlaskConical size={32} />,
         color: "from-purple-400 to-violet-300",
         bgColor: "bg-purple-50 dark:bg-purple-900/20"
     },
     {
-        title: "Library & Reading Spaces",
-        description: "A peaceful haven filled with thousands of books, cozy reading corners, and digital resources for every learner.",
+        title: "ICT & Computer Lab",
+        description: "Modern computer facilities providing practical ICT training, internet access, and multimedia-supported learning.",
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+        icon: <Building2 size={32} />,
+        color: "from-blue-400 to-cyan-300",
+        bgColor: "bg-blue-50 dark:bg-blue-900/20"
+    },
+    {
+        title: "Library & Resource Center",
+        description: "A dedicated academic space offering books, reference materials, newspapers, and magazines to support independent study.",
         image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2670&auto=format&fit=crop",
         icon: <BookOpen size={32} />,
         color: "from-amber-400 to-orange-300",
         bgColor: "bg-amber-50 dark:bg-amber-900/20"
     },
     {
-        title: "Sports & Play Areas",
-        description: "Expansive playgrounds, sports courts, and activity zones designed for physical fitness and joyful play.",
+        title: "Sports & Co-Curricular Facilities",
+        description: "Outdoor learning spaces, sports grounds, music and art activities, and event areas that support holistic student development.",
         image: "https://images.unsplash.com/photo-1519766304817-4f37bda74a26?q=80&w=2670&auto=format&fit=crop",
         icon: <Dumbbell size={32} />,
         color: "from-green-400 to-emerald-300",
         bgColor: "bg-green-50 dark:bg-green-900/20"
     },
     {
-        title: "Safety & Security",
-        description: "24/7 surveillance, trained security staff, and comprehensive safety protocols ensuring peace of mind for parents.",
+        title: "Auditorium & Activity Hall",
+        description: "A dedicated space for assemblies, cultural programs, academic presentations, and institutional events.",
         image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop",
-        icon: <Shield size={32} />,
-        color: "from-red-400 to-pink-300",
-        bgColor: "bg-red-50 dark:bg-red-900/20"
-    },
-    {
-        title: "Transportation",
-        description: "Safe, GPS-tracked school buses with trained drivers and attendants, covering all major routes in the city.",
-        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2669&auto=format&fit=crop",
-        icon: <Bus size={32} />,
+        icon: <Building2 size={32} />,
         color: "from-indigo-400 to-blue-300",
         bgColor: "bg-indigo-50 dark:bg-indigo-900/20"
     }

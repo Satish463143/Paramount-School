@@ -1,20 +1,19 @@
 import React from 'react';
-import schoolImg from '@/assets/school.jpg';
 
 const environmentBlocks = [
   {
-    title: 'Green & Open Spaces',
-    description: 'Expansive courtyards and lush gardens that provide a natural, calming backdrop for student interaction.',
+    title: 'Peaceful & Education-Friendly Location',
+    description: 'Located in Ward No. 8, Tokha Municipality, Gongabu Baniyatar, the school provides a peaceful, safe, and education-friendly environment with strong community connection.',
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Nurturing Surroundings',
-    description: 'Thoughtfully designed child-friendly pathways and recreational zones that promote exploration and movement.',
+    title: 'Outdoor Learning Environment',
+    description: 'Learning extends beyond classrooms through educational field visits, environmental observation projects, community-based learning, gardening activities, and open-space group discussions.',
     image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Ventilated & Lit',
-    description: 'Architectural designs that maximize natural light and airflow, creating a healthy and vibrant learning climate.',
+    title: 'Safe & Hygienic Campus',
+    description: 'The campus maintains boundary walls, controlled entry, CCTV surveillance, supervision systems, clean drinking water, sanitation facilities, and structured discipline to ensure a secure and healthy learning atmosphere.',
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
   },
 ];
@@ -41,7 +40,7 @@ const CampusEnvironment = () => {
                 </span>
             </h2>            
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Our campus is a carefully curated ecosystem of openness, greenery, and safety—built to let young minds breathe and grow.
+                Paramount Academy offers a supportive and safe learning atmosphere designed to promote growth, discipline, and academic focus. Our campus environment reflects our commitment to holistic education, community values, and student well-being.
             </p>
         </div>
 

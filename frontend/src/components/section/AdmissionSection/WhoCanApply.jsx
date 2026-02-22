@@ -3,14 +3,13 @@ import { GraduationCap, Baby, BookOpen, UserCheck, ArrowRight } from 'lucide-rea
 
 const academicLevels = [
   {
-    level: "Pre-Primary",
-    grades: "Nursery, LKG, UKG",
-    age: "2.5 — 5 Years",
-    description: "A nurturing environment where little learners begin their journey through play-based discovery and social development.",
+    level: "Early Childhood Development",
+    grades: "Nursery to Senior Montessori",
+    description: "Montessori-based education integrated with the national ECD curriculum focusing on curiosity, independence, creativity, and social development through activity-based learning.",
     criteria: [
-      "Age appropriateness",
-      "Emotional readiness",
-      "Physical health screening"
+      "Application form submission",
+      "Informal child observation",
+      "Parent interaction session"
     ],
     accent: "bg-sky-50 dark:bg-sky-950/30",
     textAccent: "text-sky-600 dark:text-sky-400",
@@ -18,14 +17,13 @@ const academicLevels = [
     icon: <Baby size={32} />
   },
   {
-    level: "Primary School",
-    grades: "Grade 1 to Grade 5",
-    age: "5 — 10 Years",
-    description: "Building strong foundations in core subjects while fostering curiosity, creativity, and fundamental study habits.",
+    level: "Primary Level",
+    grades: "Grade 1 to Grade 3",
+    description: "Grade Teaching Model with Continuous Evaluation System (CES) to build strong academic foundations and consistent learning progress.",
     criteria: [
-      "Transfer certificate",
-      "Academic assessment",
-      "Previous school records"
+      "Application form submission",
+      "Entrance examination (if required)",
+      "Previous academic records"
     ],
     accent: "bg-amber-50 dark:bg-amber-950/30",
     textAccent: "text-amber-600 dark:text-amber-400",
@@ -33,18 +31,45 @@ const academicLevels = [
     icon: <BookOpen size={32} />
   },
   {
-    level: "Secondary School",
-    grades: "Grade 6 to Grade 10",
-    age: "10 — 15 Years",
-    description: "Academically rigorous programs designed to prepare students for higher challenges and personal leadership.",
+    level: "Lower Secondary Level",
+    grades: "Grade 4 to Grade 8",
+    description: "Subject Teaching Model with a balanced 50% theory and 50% practical approach including laboratory work, projects, and outdoor learning.",
     criteria: [
-      "SEE preparation focus",
-      "Subject proficiency test",
-      "Interview assessment"
+      "Entrance examination",
+      "Previous academic records",
+      "Seat availability"
     ],
     accent: "bg-primary/5 dark:bg-primary/10",
     textAccent: "text-primary dark:text-primary",
     borderAccent: "border-primary/10 dark:border-primary/20",
+    icon: <GraduationCap size={32} />
+  },
+  {
+    level: "Secondary Level",
+    grades: "Grade 9 & 10",
+    description: "NEB-aligned curriculum with 75% theory and 25% practical learning focused on board examination preparation and career awareness.",
+    criteria: [
+      "Entrance examination",
+      "Academic record verification",
+      "Limited seat availability"
+    ],
+    accent: "bg-emerald-50 dark:bg-emerald-950/30",
+    textAccent: "text-emerald-600 dark:text-emerald-400",
+    borderAccent: "border-emerald-100 dark:border-emerald-800",
+    icon: <GraduationCap size={32} />
+  },
+  {
+    level: "Higher Secondary Level",
+    grades: "Grade 11 & 12 (Science & Management)",
+    description: "Science and Management streams under NEB with 75% theory and 25% practical model, including lab sessions, research work, and career counseling.",
+    criteria: [
+      "SEE results evaluation",
+      "Entrance examination (if required)",
+      "Document verification & fee clearance"
+    ],
+    accent: "bg-rose-50 dark:bg-rose-950/30",
+    textAccent: "text-rose-600 dark:text-rose-400",
+    borderAccent: "border-rose-100 dark:border-rose-800",
     icon: <GraduationCap size={32} />
   }
 ];
@@ -87,7 +112,7 @@ const WhoCanApply = () => {
             {academicLevels.map((item, index) => (
               <div 
                 key={index} 
-                className="relative flex flex-col items-start"
+                className="relative flex flex-col items-start h-full"
                 data-aos="fade-up"
                 data-aos-delay={index * 200}
               >
@@ -100,7 +125,7 @@ const WhoCanApply = () => {
                 </div>
 
                 {/* Content Container - Curved & Soft */}
-                <div className={`w-full p-8 md:p-10 rounded-[2.5rem] border ${item.borderAccent} ${item.accent} backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 group`}>
+                <div className={`w-full flex-1 flex flex-col p-8 md:p-10 rounded-[2.5rem] border ${item.borderAccent} ${item.accent} backdrop-blur-sm transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 group`}>
                   
                   {/* Level Tag */}
                   <div className="flex items-center justify-between mb-6">
@@ -124,7 +149,7 @@ const WhoCanApply = () => {
                   </p>
 
                   {/* Criteria List */}
-                  <div className="space-y-3 pt-6 border-t border-black/5 dark:border-white/5">
+                  <div className="space-y-3 pt-6 border-t border-black/5 dark:border-white/5 mt-auto">
                     <h4 className="text-xs font-bold uppercase tracking-widest text-foreground/60 mb-4">Academic Readiness</h4>
                     {item.criteria.map((criterion, i) => (
                       <div key={i} className="flex items-center gap-3 text-sm text-muted-foreground">

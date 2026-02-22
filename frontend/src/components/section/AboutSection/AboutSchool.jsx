@@ -35,7 +35,7 @@ const AboutSchool = () => {
                                 
                                 <Quote size={40} className="text-secondary/80 mb-4 stroke-2" />
                                 <p className="text-white text-lg font-medium leading-relaxed mb-4 relative z-10">
-                                    "We don't just teach minds; we touch hearts and shape futures."
+                                    "Quality Education through Learning and Doing."
                                 </p>
                                 <div className="flex items-center gap-3 relative z-10">
                                     <div className="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-bold text-xs shadow-lg">
@@ -43,7 +43,7 @@ const AboutSchool = () => {
                                     </div>
                                     <div>
                                         <p className="text-white font-bold text-sm tracking-wide">Principal's Vision</p>
-                                        <p className="text-white/60 text-xs uppercase tracking-wider">Since 1995</p>
+                                        <p className="text-white/60 text-xs uppercase tracking-wider">Since 2004</p>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ const AboutSchool = () => {
                             </h2>
 
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                                At Paramount School, education goes beyond textbooks. We foster a vibrant community where curiosity is sparked, talents are nurtured, and every child feels safe to explore their potential.
+                                At Paramount Academy, we provide nationally recognized education under the National Examination Board. Our student-centered approach combines academic excellence, discipline, and holistic development through theory and practical learning models.
                             </p>
                         </div>
 
@@ -78,9 +78,11 @@ const AboutSchool = () => {
                                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                     <BookOpen size={24} className="text-primary group-hover:text-white transition-colors" />
                                 </div>
-                                <h4 className="text-lg font-bold text-foreground mb-2">Academic Mastery</h4>
+                                <h4 className="text-lg font-bold text-foreground mb-2">
+                                    NEB-Aligned Curriculum
+                                </h4>
                                 <p className="text-sm text-muted-foreground leading-relaxed">
-                                    Rigorous curriculum designed to challenge and inspire critical thinking.
+                                    Structured academic programs from Nursery to Grade Twelve with balanced theory and practical integration.
                                 </p>
                             </div>
 
@@ -88,9 +90,11 @@ const AboutSchool = () => {
                                 <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                                     <Users size={24} className="text-secondary group-hover:text-white transition-colors" />
                                 </div>
-                                <h4 className="text-lg font-bold text-foreground mb-2">Focus on Character</h4>
+                                <h4 className="text-lg font-bold text-foreground mb-2">
+                                    Holistic Development
+                                </h4>
                                 <p className="text-sm text-muted-foreground leading-relaxed">
-                                    Instilling values of empathy, integrity, and resilience in every student.
+                                    Emphasis on discipline, leadership, extracurricular participation, and strong human values.
                                 </p>
                             </div>
                         </div>
@@ -112,8 +116,8 @@ const AboutSchool = () => {
                                     ))}
                                 </div>
                                 <div className="text-sm">
-                                    <p className="font-bold text-foreground">1,200+ Students</p>
-                                    <p className="text-xs text-muted-foreground">Trust Paramount School</p>
+                                    <p className="font-bold text-foreground">NEB Affiliated Institution</p>
+                                    <p className="text-xs text-muted-foreground">Located in Tokha-8, Gongabu Baniyatar</p>
                                 </div>
                             </div>
                         </div>

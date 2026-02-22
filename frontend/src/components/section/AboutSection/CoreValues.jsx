@@ -4,8 +4,17 @@ import Title from '@/components/common/Title/Title';
 
 const values = [
     {
-        title: "Integrity",
-        desc: "We believe in honesty, trust, and doing the right thing, even when no one is watching.",
+        title: "Academic Excellence",
+        desc: "Commitment to high academic standards through disciplined study, structured evaluation, and nationally aligned curriculum.",
+        icon: <Award size={28} />,
+        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
+        color: "from-purple-400 to-violet-300",
+        bgColor: "bg-purple-100 dark:bg-purple-900/30",
+        accentColor: "bg-purple-400"
+    },
+    {
+        title: "Discipline & Responsibility",
+        desc: "A structured learning environment that fosters accountability, self-control, and respect for institutional values.",
         icon: <Shield size={28} />,
         image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop",
         color: "from-blue-400 to-cyan-300",
@@ -13,26 +22,8 @@ const values = [
         accentColor: "bg-blue-400"
     },
     {
-        title: "Respect",
-        desc: "Every voice matters. We honor diversity, listen actively, and treat everyone with kindness.",
-        icon: <Heart size={28} />,
-        image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=2574&auto=format&fit=crop",
-        color: "from-pink-400 to-rose-300",
-        bgColor: "bg-pink-100 dark:bg-pink-900/30",
-        accentColor: "bg-pink-400"
-    },
-    {
-        title: "Curiosity",
-        desc: "We nurture a love for learning, encouraging students to ask questions and explore the world.",
-        icon: <Lightbulb size={28} />,
-        image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2586&auto=format&fit=crop",
-        color: "from-yellow-400 to-orange-300",
-        bgColor: "bg-yellow-100 dark:bg-yellow-900/30",
-        accentColor: "bg-yellow-400"
-    },
-    {
-        title: "Compassion",
-        desc: "Kindness and empathy are at our core. We build a community that cares for one another.",
+        title: "Holistic Development",
+        desc: "Balanced emphasis on intellectual, social, emotional, moral, and physical growth to prepare responsible citizens.",
         icon: <Users size={28} />,
         image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2669&auto=format&fit=crop",
         color: "from-green-400 to-emerald-300",
@@ -40,13 +31,22 @@ const values = [
         accentColor: "bg-green-400"
     },
     {
-        title: "Excellence",
-        desc: "We strive for our personal best, celebrating growth and effort alongside achievement.",
-        icon: <Award size={28} />,
-        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
-        color: "from-purple-400 to-violet-300",
-        bgColor: "bg-purple-100 dark:bg-purple-900/30",
-        accentColor: "bg-purple-400"
+        title: "Leadership & Confidence",
+        desc: "Encouraging initiative, teamwork, and decision-making skills that prepare students for future responsibilities.",
+        icon: <Lightbulb size={28} />,
+        image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2586&auto=format&fit=crop",
+        color: "from-yellow-400 to-orange-300",
+        bgColor: "bg-yellow-100 dark:bg-yellow-900/30",
+        accentColor: "bg-yellow-400"
+    },
+    {
+        title: "Moral & Ethical Values",
+        desc: "Strong emphasis on integrity, respect, and social responsibility as foundations of character development.",
+        icon: <Heart size={28} />,
+        image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=2574&auto=format&fit=crop",
+        color: "from-pink-400 to-rose-300",
+        bgColor: "bg-pink-100 dark:bg-pink-900/30",
+        accentColor: "bg-pink-400"
     }
 ];
 

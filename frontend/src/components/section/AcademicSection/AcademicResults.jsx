@@ -3,24 +3,36 @@ import { Award, TrendingUp, CheckCircle2, Star } from 'lucide-react';
 
 const resultMetrics = [
   {
-    title: "Performance Overview",
-    description: "Our students consistently demonstrate a strong command of the curriculum across all academic phases. We focus on ensuring that foundational concepts are mastered before progressing to advanced topics.",
-    highlights: ["Consistent academic performance across grade levels", "High engagement in core STEM and Humanities subjects"]
+    title: "Continuous Evaluation System",
+    description: "At the primary level (Grade 1–3), students are assessed through regular classwork, assignments, presentations, and observation to ensure consistent academic progress.",
+    highlights: [
+      "Ongoing classroom-based assessment",
+      "Reduced examination pressure"
+    ]
   },
   {
-    title: "Examination Outcomes",
-    description: "Academic outcomes at the secondary level reflect a disciplined approach to learning and structured assessment. Our students meet and often exceed the standards set by the national board.",
-    highlights: ["Strong examination outcomes aligned with national board standards", "Excellence in analytical and problem-solving assessments"]
+    title: "Balanced Theory & Practical Model",
+    description: "Lower secondary follows a 50% theory and 50% practical approach, while secondary and higher secondary follow a 75% theory and 25% practical structure under NEB guidelines.",
+    highlights: [
+      "Laboratory-based learning",
+      "Project and application-focused assessment"
+    ]
   },
   {
-    title: "Progress & Growth",
-    description: "We measure success through individual student growth. Our academic tracking systems monitor progress throughout the year, ensuring that every student reaches their full potential.",
-    highlights: ["Transparent tracking of year-on-year academic growth", "Supportive feedback loops for continuous improvement"]
+    title: "NEB-Aligned Examination Preparation",
+    description: "Grades 9–12 follow the National Examination Board framework with structured academic preparation and revision programs.",
+    highlights: [
+      "Board examination focus",
+      "Practical lab evaluations"
+    ]
   },
   {
-    title: "Academic Recognitions",
-    description: "Our institution celebrates academic participation and intellectual curiosity. Recognitions are based on scholarly effort, research projects, and contributions to the academic community.",
-    highlights: ["Recognitions for scholarly effort and research", "Emphasis on intellectual curiosity and participation"]
+    title: "Student Development & Career Guidance",
+    description: "Academic growth is supported through research assignments, leadership development programs, and career counseling for future academic pathways.",
+    highlights: [
+      "Research-based assignments",
+      "Career counseling support"
+    ]
   }
 ];
 

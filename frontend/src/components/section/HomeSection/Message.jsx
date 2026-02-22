@@ -25,7 +25,7 @@ const Message = () => {
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-muted aspect-[4/5] border-4 border-card z-10">
                 <img
                   src="https://images.unsplash.com/photo-1544168190-79c17527004f?q=80&w=1976&auto=format&fit=crop"
-                  alt="Principal Dr. Sunita Rajbhandari"
+                  alt="Principal Mukunda Pd. Pandey"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
@@ -78,21 +78,12 @@ const Message = () => {
                 <Quote className="absolute -top-6 -left-8 md:-left-12 h-16 w-16 text-primary/5 -z-10" />
                 
                 <div className="text-muted-foreground text-lg md:text-xl leading-relaxed font-medium italic mb-6">
-                  "At Paramount Academy, we don't just teach modules; we shape futures. Our mission is to provide an environment where 
-                  discipline meets curiosity, and academic responsibility goes hand-in-hand with moral integrity."
+                  At Paramount Academy, we are committed to academic excellence, character development, and holistic growth. Guided by our philosophy of ‘Quality Education through Learning and Doing,’ we encourage students to think critically and apply knowledge in real-life situations.
                 </div>
 
                 <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
                   <p>
-                    Since our inception in 2001, we have remained steadfast in our commitment to academic excellence. 
-                    We believe that every child is a unique seed that requires a nurturing soil of trust and 
-                    the sunlight of professional guidance to blossom into a responsible citizen.
-                  </p>
-                  <p>
-                    Our approach is holistic, blending modern pedagogical techniques with timeless traditional values. 
-                    I invite you to be a part of this transformative journey where we strive to make every learner 
-                    not just better, but their best self.
-                  </p>
+                    From Nursery to Grade Twelve, our programs follow the National Examination Board guidelines, combining theory with practical learning. With dedicated teachers, continuous evaluation, and strong emphasis on discipline, leadership, and extracurricular activities, we strive to shape responsible and confident individuals ready for future challenges.</p>
                 </div>
               </div>
 
@@ -103,7 +94,7 @@ const Message = () => {
               >
                 <div className="flex items-center gap-5">
                   <div className="flex flex-col">
-                    <h4 className="text-2xl font-bold text-foreground tracking-tight">Dr. Sunita Rajbhandari</h4>
+                    <h4 className="text-2xl font-bold text-foreground tracking-tight">Mukunda Pd. Pandey</h4>
                     <div className="flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-widest mt-0.5">
                       <span>Principal</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
@@ -114,7 +105,7 @@ const Message = () => {
                 
                 {/* Signature Placeholder/Styling */}
                 <div className="hidden sm:block opacity-30 select-none">
-                  <span className="font-serif italic text-3xl font-light text-primary tracking-tighter">S.Rajbhandari</span>
+                  <span className="font-serif italic text-3xl font-light text-primary tracking-tighter">M.P. Pandey</span>
                 </div>
               </div>
             </div>

@@ -6,38 +6,50 @@ import { Link } from "react-router-dom";
 
 const ACADEMIC_LEVELS = [
   {
-    title: "Pre-Primary Education",
-    subtitle: "Nurturing the First Steps",
+    title: "Early Childhood Development (Nursery to Senior Montessori)",
+    subtitle: "Montessori-Based Foundation Stage",
     description:
-      "A warm, play-based environment where curiosity is celebrated. We focus on social development, motor skills, and the joy of discovery for our youngest learners.",
+      "The Early Childhood Development program follows a Montessori-based approach integrated with the National ECD curriculum. Learning is child-centered, activity-based, and experiential, focusing on curiosity, independence, creativity, and social development through sensory activities, storytelling, art, music, guided play, and practical life exercises.",
     image:
       "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop",
     icon: Compass,
-    highlights: ["Play-based Learning", "Creative Expression", "Social Development"],
+    highlights: [
+      "Language & Early Literacy Development",
+      "Basic Numeracy & Logical Reasoning",
+      "Motor Skills & Value Education"
+    ],
     color: "var(--color-primary)",
     delay: 100,
   },
   {
-    title: "Primary Level Education",
-    subtitle: "Building Strong Foundations",
+    title: "Primary & Lower Secondary Level (Grade 1–8)",
+    subtitle: "Grade & Subject Teaching Model",
     description:
-      "Transitioning into structured learning while maintaining interactive engagement. We emphasize core subjects, character building, and collaborative problem-solving.",
+      "Grades 1–3 follow a Grade Teaching Model with a Continuous Evaluation System (CES) to strengthen academic foundations and teacher–student relationships. From Grades 4–8, students transition to a Subject Teaching Model with a balanced 50% theory and 50% practical approach including laboratory experiments, project-based learning, field visits, and outdoor education.",
     image:
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
     icon: BookOpen,
-    highlights: ["Core Academic Skills", "Interactive Classrooms", "Character Building"],
+    highlights: [
+      "Continuous Evaluation System (CES)",
+      "50% Theory & 50% Practical Learning",
+      "Project-Based & Outdoor Education"
+    ],
     color: "var(--color-secondary)",
     delay: 200,
   },
   {
-    title: "Secondary Level Education",
-    subtitle: "Empowering Future Leaders",
+    title: "Secondary & Higher Secondary Level (Grade 9–12)",
+    subtitle: "NEB-Aligned Academic Excellence",
     description:
-      "Advancing toward academic discipline and analytical thinking. Our secondary curriculum prepares students for higher education with a focus on responsibility and excellence.",
+      "Grades 9 and 10 follow a 75% theory and 25% practical model aligned with the National Examination Board curriculum, focusing on board examination preparation and career awareness. Grades 11 and 12 offer Science and Management streams with practical lab sessions, research-based assignments, career counseling, leadership development programs, and university guidance support.",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
     icon: Users,
-    highlights: ["Analytical Thinking", "Leadership Programs", "Excellence Driven"],
+    highlights: [
+      "75% Theory & 25% Practical Model",
+      "Science & Management Streams",
+      "Career Counseling & University Guidance"
+    ],
     color: "var(--color-primary)",
     delay: 300,
   },

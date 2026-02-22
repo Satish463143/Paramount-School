@@ -3,34 +3,34 @@ import { BookOpen, Users, MessageCircle, HeartHandshake, GraduationCap, Home } f
 
 const supportServices = [
     {
-        icon: <GraduationCap size={24} />,
-        title: "Remedial & Extra Help Classes",
-        description: "Additional support is available for students who need help with specific subjects. After-school tutoring, one-on-one teacher assistance, and doubt-clearing sessions ensure no child is left behind in their learning journey."
+        icon: <BookOpen size={24} />,
+        title: "Library & Academic Resources",
+        description: "A well-managed library with academic books, reference materials, newspapers, and magazines supports independent study and research."
     },
     {
-        icon: <BookOpen size={24} />,
-        title: "Learning Resource Center & Library",
-        description: "A well-stocked library with age-appropriate books, digital learning resources, and quiet study spaces provides students with the materials and environment they need to explore, research, and deepen their understanding."
+        icon: <GraduationCap size={24} />,
+        title: "Continuous Assessment Support",
+        description: "Continuous Evaluation System (CES) and structured assessment help monitor student progress and strengthen academic foundations."
     },
     {
         icon: <MessageCircle size={24} />,
-        title: "Academic Counseling & Guidance",
-        description: "Students receive academic counseling for subject selection, study strategies, and time management. Senior students benefit from career guidance, helping them make informed decisions about their educational path and future aspirations."
+        title: "Academic & Career Counseling",
+        description: "Guidance for subject selection, stream selection (Science & Management), and university preparation for higher secondary students."
     },
     {
         icon: <Home size={24} />,
-        title: "Parental Communication & Partnership",
-        description: "Regular parent-teacher meetings, progress updates, and open communication channels ensure parents are actively involved in their child's academic journey. We believe education is a partnership between school, student, and family."
+        title: "Parent–School Communication",
+        description: "Regular parent–teacher interaction and transparent evaluation systems ensure collaborative academic development."
     },
     {
         icon: <Users size={24} />,
-        title: "Peer Learning & Mentorship",
-        description: "Peer tutoring programs and collaborative study groups encourage students to learn from each other. Senior-junior mentorship initiatives foster a supportive school community where knowledge and experience are shared."
+        title: "Co-Curricular & Leadership Development",
+        description: "Students participate in sports, arts, music, community-based learning, and leadership activities for holistic growth."
     },
     {
         icon: <HeartHandshake size={24} />,
-        title: "Personal & Emotional Support",
-        description: "Beyond academics, we provide personal counseling to support students' emotional well-being. Our caring approach ensures every child feels heard, valued, and supported through the challenges of growing up and learning."
+        title: "Health & First Aid Support",
+        description: "Basic first aid facilities and health awareness support ensure student well-being within a safe campus environment."
     }
 ];
 

@@ -2,16 +2,37 @@ import React from 'react';
 import { CheckCircle2, FileText, Info, Files, ShieldCheck } from 'lucide-react';
 
 const mandatoryDocuments = [
-  { name: "Birth Certificate", clarification: "Original for verification and one clear photocopy." },
-  { name: "Previous Academic Reports", clarification: "Consolidated grade-sheets for the last academic year." },
-  { name: "Transfer Certificate", clarification: "Original copy from the previously attended institution." },
-  { name: "Recent Photographs", clarification: "4 passport-sized color photographs of the student." },
+  { 
+    name: "Previous Academic Records", 
+    clarification: "Mark sheets and academic reports from the previously attended institution." 
+  },
+  { 
+    name: "Transfer Certificate", 
+    clarification: "Original Transfer Certificate from the previous school." 
+  },
+  { 
+    name: "SEE Mark Sheet & Character Certificate", 
+    clarification: "Required for Grade 11 applicants as per NEB guidelines." 
+  },
+  { 
+    name: "Recent Passport-Size Photographs", 
+    clarification: "Recent passport-size photographs of the student for official records." 
+  },
 ];
 
 const additionalDocuments = [
-  { name: "Citizenship/ID of Parents", clarification: "Photocopy of Citizenship Certificate or Passport." },
-  { name: "Medical Records", clarification: "Immunization records and any specific health alerts." },
-  { name: "Migration Certificate", clarification: "Required for students moving from a different board/category." },
+  { 
+    name: "Migration Certificate", 
+    clarification: "Required if applicable, especially for students transferring boards or institutions." 
+  },
+  { 
+    name: "Citizenship Copy", 
+    clarification: "Citizenship copy required for record purposes (as mentioned for higher secondary level)." 
+  },
+  { 
+    name: "Completed Admission Form", 
+    clarification: "Official admission form to be submitted to the school administration office." 
+  },
 ];
 
 const RequiredDocuments = () => {

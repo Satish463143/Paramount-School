@@ -4,29 +4,29 @@ import { useLocation } from 'react-router-dom';
 
 const programs = [
     {
-        title: "Arts & Creative Expression",
-        description: "Through music, dance, and visual arts, students explore their creative potential and learn to express ideas with confidence. This structured enrichment fosters aesthetic appreciation and emotional growth.",
+        title: "Arts, Music & Creative Activities",
+        description: "Students participate in music, art, and craft activities through dedicated Music Lab and Art & Craft facilities, encouraging creativity, confidence, and self-expression.",
         image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2671&auto=format&fit=crop",
         icon: <Palette size={24} />,
         tag: "CREATIVITY"
     },
     {
-        title: "Sports & Physical Development",
-        description: "Physical education and competitive sports build teamwork, resilience, and personal discipline. Guided activities ensure students develop healthy habits and learn the value of perseverance.",
+        title: "Sports & Physical Education",
+        description: "Playground facilities, basketball and volleyball courts, indoor games, athletics training, and annual sports events promote discipline, teamwork, and physical fitness.",
         image: "https://images.unsplash.com/photo-1526232310673-59c248315806?q=80&w=2574&auto=format&fit=crop",
         icon: <Trophy size={24} />,
         tag: "DISCIPLINE"
     },
     {
-        title: "Cultural & Community Activities",
-        description: "Cultural programs and community service initiatives encourage students to understand their heritage and contribute positively to society. These activities nurture empathy and social responsibility.",
+        title: "Cultural & Event Programs",
+        description: "Annual functions, cultural programs, seminars, workshops, and student presentations provide platforms for talent development and public speaking skills.",
         image: "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=2574&auto=format&fit=crop",
         icon: <Globe size={24} />,
         tag: "VALUES"
     },
     {
-        title: "Clubs, Skills & Leadership Programs",
-        description: "Specialized clubs and leadership workshops allow students to develop practical skills and project management abilities. We focus on preparing students for future challenges with confidence.",
+        title: "Leadership & Experiential Learning",
+        description: "Project-based learning, outdoor educational activities, research assignments, and leadership development initiatives prepare students for future academic and professional challenges.",
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop",
         icon: <Lightbulb size={24} />,
         tag: "LEADERSHIP"

@@ -2,58 +2,6 @@ import { useListAllQuery } from '@/api/notice.api';
 import React, { useState,useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const noticesData = [
-  {
-    id: 1,
-    date: '10 Feb',
-    year: '2026',
-    category: 'Academic',
-    title: 'Final Examination Schedule - Q1',
-    summary: 'The comprehensive schedule for the first quarter final examinations is now available for all grades. Please ensure students prepare as per the revised syllabus guidelines.',
-    priority: 'high',
-    color: 'emerald',
-  },
-  {
-    id: 2,
-    date: '08 Feb',
-    year: '2026',
-    category: 'Administrative',
-    title: 'Revised Summer Timings',
-    summary: 'Starting April 1st, school hours will be 7:30 AM to 12:30 PM to ensure student comfort during peak heat hours. Bus routes will be adjusted accordingly.',
-    priority: 'normal',
-    color: 'sky',
-  },
-  {
-    id: 3,
-    date: '05 Feb',
-    year: '2026',
-    category: 'Events',
-    title: 'Sports Day Registration',
-    summary: 'The portal for individual and team event registrations for the Annual Sports Meet is now open. All participants must submit their entries by the end of this week.',
-    priority: 'normal',
-    color: 'purple',
-  },
-  {
-    id: 4,
-    date: '01 Feb',
-    year: '2026',
-    category: 'Academic',
-    title: 'Digital Library Expansion',
-    summary: 'We have successfully integrated a new digital collection featuring over 500 peer-reviewed journals and 2,000+ interactive e-books for research.',
-    priority: 'normal',
-    color: 'indigo',
-  },
-  {
-    id: 5,
-    date: '28 Jan',
-    year: '2026',
-    category: 'Policy',
-    title: 'Transport Safety Protocol',
-    summary: 'Introduction of real-time GPS tracking for all school buses. Parents can now monitor their child’s commute via the official school mobile application.',
-    priority: 'high',
-    color: 'rose',
-  },
-];
 
 // Utility function to format day
 const getDay = (dateString) => {

@@ -4,18 +4,18 @@ import { BookOpen, GraduationCap, FileText, Download, CheckCircle2 } from 'lucid
 const curriculumHighlights = [
     {
         icon: <BookOpen size={20} />,
-        title: "Comprehensive Subject Coverage",
-        description: "Core subjects including Languages, Mathematics, Sciences, Social Studies, and Arts"
+        title: "NEB-Aligned Curriculum",
+        description: "Academic programs from Nursery to Grade Twelve follow the guidelines of the National Examination Board with nationally recognized standards."
     },
     {
         icon: <GraduationCap size={20} />,
-        title: "Skill-Based Learning",
-        description: "Focus on critical thinking, problem-solving, creativity, and communication skills"
+        title: "Theory & Practical Integration",
+        description: "Balanced 50% practical learning in lower levels and 75% theory with 25% practical structure in secondary and higher secondary education."
     },
     {
         icon: <CheckCircle2 size={20} />,
-        title: "Age-Appropriate Progression",
-        description: "Carefully structured content that builds complexity as students advance through grades"
+        title: "Research & Application-Based Learning",
+        description: "Laboratory work, project-based assignments, outdoor activities, and experiential learning strengthen practical understanding and real-world application."
     }
 ];
 

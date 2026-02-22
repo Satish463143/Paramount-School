@@ -7,7 +7,6 @@ const randomStringGenerator = (length) => {
         random +=char[posn]
     }
     return random
-
 }
 module.exports = {
     randomStringGenerator

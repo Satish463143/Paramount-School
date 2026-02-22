@@ -1,35 +1,33 @@
 import React from 'react';
-import schoolImg from '@/assets/school.jpg';
-import Title from '@/components/common/Title/Title';
 
 const techFacilities = [
   {
-    title: 'Smart Classrooms',
-    description: 'Equipped with interactive touch-panels that turn learning into a collaborative adventure.',
+    title: 'ICT & Computer Lab',
+    description: 'Equipped with modern computers and internet access to support structured digital learning and academic research.',
     image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop',
     color: 'bg-blue-50 dark:bg-blue-900/20',
     accent: 'text-blue-600 dark:text-blue-400',
     blobClass: 'rounded-[30%_70%_70%_30%/30%_30%_70%_70%]',
   },
   {
-    title: 'Computer Laboratories',
-    description: 'Modern workstations where young minds explore coding, design, and digital literacy tools.',
+    title: 'Practical Computer Classes',
+    description: 'Hands-on ICT sessions from basic to advanced levels to build strong digital literacy and technical skills.',
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop',
     color: 'bg-emerald-50 dark:bg-emerald-900/20',
     accent: 'text-emerald-600 dark:text-emerald-400',
     blobClass: 'rounded-[70%_30%_30%_70%/60%_40%_60%_40%]',
   },
   {
-    title: 'Digital Research',
-    description: 'Guided access to high-quality educational databases and global digital libraries.',
+    title: 'Multimedia Learning Tools',
+    description: 'Digital tools and presentation systems integrated into classroom learning for interactive and engaging instruction.',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb28f74b0cd?q=80&w=800&auto=format&fit=crop',
     color: 'bg-amber-50 dark:bg-amber-900/20',
     accent: 'text-amber-600 dark:text-amber-400',
     blobClass: 'rounded-[40%_60%_60%_40%/70%_30%_30%_70%]',
   },
   {
-    title: 'Audio-Visual Spaces',
-    description: 'Immersive spaces for cinematic learning and interactive digital presentations.',
+    title: 'Research & Project Support',
+    description: 'Technology-enabled support for academic projects, research assignments, and digital presentations across grade levels.',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop',
     color: 'bg-purple-50 dark:bg-purple-900/20',
     accent: 'text-purple-600 dark:text-purple-400',

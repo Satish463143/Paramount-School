@@ -16,7 +16,7 @@ const contactData = [
     tag: 'SCHOOL HOURS',
     title: 'Availability',
     icon: Clock,
-    details: ['Mon - Sat: 8:00 AM - 3:00 PM', 'Sunday: Closed'],
+    details: ['Sun - Fri: 8:00 AM - 3:00 PM', 'Saturday: Closed'],
     position: 'top-right',
   },
   {
@@ -32,7 +32,7 @@ const contactData = [
     tag: 'CAMPUS LOCATION',
     title: 'Visit Us',
     icon: MapPin,
-    details: ['Plot No. 45, Education Hub,', 'New Delhi - 110001'],
+    details: ['Ward No. 8, Tokha Municipality,', 'Gongabu Baniyatar, Nepal'],
     position: 'bottom-right',
   },
 ];

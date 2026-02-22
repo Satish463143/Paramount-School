@@ -11,22 +11,25 @@ import {
 
 const FACILITIES_DATA = [
   {
-    name: "Science Laboratory",
-    description: "Equipped for hands-on exploration and practical scientific discovery.",
+    name: "Modern Science Laboratory",
+    description:
+      "Fully equipped laboratory supporting practical learning in Physics, Chemistry, and Biology for Grades 6–12. Includes modern scientific instruments, laboratory safety equipment, practical experiment materials, and guided lab sessions under trained teachers.",
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
     icon: Beaker,
     delay: 100
   },
   {
     name: "Library & Resource Center",
-    description: "A vast collection of resources and a peaceful space for reading and research.",
+    description:
+      "A well-managed library providing a quiet, resource-rich environment with a wide collection of academic books, reference materials, storybooks, novels, newspapers, magazines, and dedicated reading space to promote independent learning.",
     image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop",
     icon: Book,
     delay: 300
   },
   {
-    name: "Smart Classrooms",
-    description: "Technology-enabled learning environments for interactive engagement.",
+    name: "ICT & Computer Lab",
+    description:
+      "Modern computer lab equipped with updated systems and internet access. Supports practical computer classes, basic to advanced ICT training, multimedia learning tools, research projects, and digital presentation practice.",
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2670&auto=format&fit=crop",
     icon: Laptop,
     delay: 400

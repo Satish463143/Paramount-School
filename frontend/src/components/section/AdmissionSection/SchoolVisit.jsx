@@ -32,7 +32,7 @@ const SchoolVisit = () => {
                    </div>
                    <div>
                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Location</p>
-                     <p className="text-sm font-bold text-foreground">Paramount Main Campus</p>
+                     <p className="text-sm font-bold text-foreground">Paramount Main School</p>
                    </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const SchoolVisit = () => {
               <div className="mt-12 pt-8 border-t border-border/50">
                  <p className="text-sm text-muted-foreground flex items-center gap-3 italic">
                    <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                   Visits are available Monday to Friday, 9:00 AM — 3:00 PM.
+                   Visits are available Sunday to Friday, 9:00 AM — 5:00 PM.
                  </p>
               </div>
             </div>

@@ -4,30 +4,27 @@ import { useEffect } from 'react';
 
 const academicLevels = [
     {
-        title: "Pre-Primary Education",
-        grades: "Nursery to UKG",
-        ageGroup: "Ages 3-5",
-        description: "Our early years program focuses on play-based learning, social development, and foundational skills. Children explore, discover, and build confidence in a nurturing environment designed to spark curiosity and foster a love for learning.",
+        title: "Early Childhood Development",
+        grades: "Nursery to Senior Montessori",
+        description: "Montessori-based education integrated with the national ECD curriculum, focusing on curiosity, independence, creativity, and activity-based experiential learning.",
         image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2670&auto=format&fit=crop",
-        imageAlt: "Young children engaged in playful learning activities",
+        imageAlt: "Students engaged in Montessori-based learning activities",
         icon: <Users size={24} />
     },
     {
-        title: "Primary Education",
-        grades: "Class 1 to Class 5",
-        ageGroup: "Ages 6-10",
-        description: "Students build strong academic foundations across core subjects while developing critical thinking and problem-solving skills. Our approach balances structured learning with creative exploration, ensuring each child progresses confidently through essential concepts.",
+        title: "Primary & Lower Secondary Education",
+        grades: "Grade 1 to Grade 8",
+        description: "Grade Teaching Model (Grade 1–3) with Continuous Evaluation System, followed by Subject Teaching Model (Grade 4–8) using a balanced 50% theory and 50% practical approach including projects, laboratory work, and outdoor learning.",
         image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop",
-        imageAlt: "Primary students actively learning in classroom",
+        imageAlt: "Students actively learning in structured classroom environment",
         icon: <BookOpen size={24} />
     },
     {
-        title: "Secondary Education",
-        grades: "Class 6 to Class 10",
-        ageGroup: "Ages 11-15",
-        description: "Our secondary program prepares students for academic excellence and personal growth. With specialized subject instruction, advanced learning methodologies, and comprehensive exam preparation, students develop the knowledge and skills needed for higher education and beyond.",
+        title: "Secondary & Higher Secondary Education",
+        grades: "Grade 9 to Grade 12",
+        description: "NEB-aligned curriculum with 75% theory and 25% practical learning. Includes Science and Management streams in Grades 11–12, supported by laboratory sessions, research work, career counseling, and exam preparation.",
         image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
-        imageAlt: "Secondary students in focused classroom learning",
+        imageAlt: "Students engaged in focused academic learning",
         icon: <GraduationCap size={24} />
     }
 ];

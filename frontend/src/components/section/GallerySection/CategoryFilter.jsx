@@ -1,5 +1,5 @@
 import { useListAllQuery } from '@/api/galleryCategory.api';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef} from 'react';
 
 const CategoryFilter = ({ onCategoryChange }) => {
   const [page] = useState(1)

@@ -1,30 +1,29 @@
 import React from 'react';
-import Title from '@/components/common/Title/Title';
 
 const safetyMeasures = [
   {
-    title: 'Security Monitoring',
-    description: '24/7 high-definition CCTV surveillance across all campus areas ensuring constant vigilance and safety.',
+    title: 'CCTV Surveillance',
+    description: 'Campus monitored through CCTV surveillance to maintain safety, discipline, and a secure academic environment.',
     image: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Controlled Access',
-    description: 'Strict entry and exit protocols for students, staff, and visitors to maintain a secure learning environment.',
+    title: 'Controlled Entry System',
+    description: 'Boundary walls and controlled entry ensure regulated access and a safe learning atmosphere.',
     image: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Trained Personnel',
-    description: 'Professional security staff trained in emergency response and child safety stationed at all key points.',
+    title: 'Supervised & Disciplined Campus',
+    description: 'Structured discipline and monitoring systems provide a peaceful, supervised environment for students.',
     image: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Emergency Readiness',
-    description: 'Comprehensive fire safety systems and regular drills to ensure swift and organized evacuation procedures.',
+    title: 'Health & First Aid Support',
+    description: 'Basic first aid facility and emergency response support available to ensure student well-being.',
     image: 'https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?q=80&w=800&auto=format&fit=crop',
   },
   {
-    title: 'Health & Medical',
-    description: 'Dedicated medical room with a qualified nurse and primary health support systems for student well-being.',
+    title: 'Hygiene & Sanitation',
+    description: 'Clean drinking water and proper sanitation facilities maintained to ensure a healthy campus environment.',
     image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop',
   },
 ];
@@ -54,7 +53,7 @@ const SafetySecurity = () => {
                 <span className="text-primary">Security</span> & Health
               </h3>
               <p className="text-slate-200 text-base md:text-lg opacity-90 leading-relaxed font-medium">
-                We take the responsibility of your child's safety with the utmost seriousness. Our comprehensive security frameworks ensure a secure, prepared, and healthy campus environment.
+                  With CCTV surveillance, controlled entry systems, and structured campus monitoring, Paramount Academy maintains a secure, disciplined, and student-focused learning atmosphere.
               </p>
             </div>
           </div>
@@ -74,7 +73,7 @@ const SafetySecurity = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
-                    Campus-Wide Protection
+                    Secure & Supervised Environment
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                     Our safety strategy is built on a foundation of proactive monitoring and strict institutional protocols. Every student's presence is accounted for within our secure campus perimeter.
@@ -120,12 +119,12 @@ const SafetySecurity = () => {
               
               {/* Emergency Contact Block */}
               <div className="p-8 md:p-10 bg-slate-900 dark:bg-primary/20 text-white flex flex-col justify-center items-center text-center space-y-4" data-aos="fade-in">
-                <h4 className="text-xl font-bold">Institutional Reliability</h4>
+                <h4 className="text-xl font-bold">Safe & Secure Campus</h4>
                 <p className="text-sm text-slate-300">
-                  Committed to immediate response and student safety foundation.
+                    Structured discipline, supervision, and monitoring systems ensure a peaceful and protected learning environment.
                 </p>
                 <div className="w-16 h-px bg-white/20" />
-                <span className="text-[10px] uppercase tracking-widest font-bold">Safe Campus Initiative</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold">School Safety System</span>
               </div>
             </div>
           </div>

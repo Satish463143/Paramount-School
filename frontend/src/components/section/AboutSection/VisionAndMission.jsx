@@ -54,7 +54,7 @@ const VisionAndMission = () => {
                                     <span className="font-bold text-xs text-foreground">Parent Approved</span>
                                 </div>
                                 <p className="text-[10px] text-muted-foreground leading-tight">
-                                    Trusted by over 1,500 families for our nurturing environment.
+                                    Trusted by over 1000+ families for our nurturing environment.
                                 </p>
                             </div>
                         </div>

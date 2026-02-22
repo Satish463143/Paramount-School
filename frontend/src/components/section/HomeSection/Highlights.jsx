@@ -3,26 +3,30 @@ import { UserCheck, ShieldCheck, GraduationCap, School, Sparkles, CheckCircle2 }
 
 const HIGHLIGHT_ITEMS = [
   {
-    title: "Qualified Teachers",
-    description: "Experienced, trained, and dedicated educators guiding students with master-level expertise.",
+    title: "Qualified & Dedicated Faculty",
+    description:
+      "Supported by a team of qualified, experienced, and dedicated teachers who guide students to discover their potential, build confidence, and develop responsibility and strong values.",
     icon: UserCheck,
     delay: 100,
   },
   {
-    title: "Safe & Disciplined",
-    description: "A secure campus fostering mutual respect and a peaceful, structured learning atmosphere.",
+    title: "Safe & Secure Campus",
+    description:
+      "Peaceful and secure learning environment with boundary walls, controlled entry system, CCTV surveillance, discipline monitoring, and supervised campus management.",
     icon: ShieldCheck,
     delay: 200,
   },
   {
-    title: "Holistic Academic Approach",
-    description: "Balanced focus on academics, character building, and creative extracurricular growth.",
+    title: "Balanced Theory & Practical Model",
+    description:
+      "Structured academic approach integrating theory with practical learning—50% practical exposure in lower levels and 75% theory with 25% practical at secondary levels under NEB guidelines.",
     icon: GraduationCap,
     delay: 300,
   },
   {
-    title: "Modern Learning Facilities",
-    description: "Well-equipped smart classrooms and advanced laboratories for high-quality education.",
+    title: "Modern Infrastructure & Facilities",
+    description:
+      "Well-equipped science laboratories, ICT and computer lab, library & resource center, music lab, art & craft lab, sports facilities, and outdoor learning environment supporting holistic development.",
     icon: School,
     delay: 400,
   },
