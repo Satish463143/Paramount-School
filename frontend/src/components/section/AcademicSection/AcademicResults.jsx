@@ -1,5 +1,6 @@
 import React from 'react';
-import { Award, TrendingUp, CheckCircle2, Star } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
+import Results from '../../../../public/Results.jpg'
 
 const resultMetrics = [
   {
@@ -112,8 +113,9 @@ const AcademicResults = () => {
         <div className="mt-24 md:mt-32" data-aos="fade-up">
           <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
             <img 
-              src="https://media.istockphoto.com/id/826212832/photo/two-girls-celebrating-exam-results-in-school-corridor.jpg?s=612x612&w=0&k=20&c=Nn5XLgCFyQNl9Wd8REneqRAD6wxqjFAtsxW1z7Nw-5c=" 
+              src={Results} 
               alt="Academic Recognition" 
+              loading='lazy'
               className="w-full h-[300px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />

@@ -1,5 +1,7 @@
 import React from "react";
 import { Quote } from "lucide-react";
+import Principal from "../../../../public/principal.jpg"
+
 
 const Message = () => {
   return (
@@ -24,7 +26,8 @@ const Message = () => {
               {/* Image Container */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-muted aspect-[4/5] border-4 border-card z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1544168190-79c17527004f?q=80&w=1976&auto=format&fit=crop"
+                  src={Principal}
+                  loading="lazy"
                   alt="Principal Mukunda Pd. Pandey"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

@@ -1,35 +1,40 @@
 import React from 'react';
+import Excelence from '../../../../public/Excellence.jpg'
+import two from '../../../../public/two.jpg'
+import twelve from '../../../../public/twelve.jpg'
+import sixteen from '../../../../public/sixteen.jpg'
+import fourteen from '../../../../public/fourteen.jpg'
 
 const infrastructureData = [
   {
     id: '01',
     title: 'Safe & Secure Campus',
     description: 'The school premises are designed to ensure safety and discipline with boundary walls, controlled entry system, CCTV surveillance, supervised environment, and structured monitoring to maintain a peaceful learning atmosphere.',
-    image: 'https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=1200&auto=format&fit=crop',
+    image: Excelence,
   },
   {
     id: '02',
     title: 'Science Laboratories',
     description: 'Fully equipped laboratories supporting practical learning in Physics, Chemistry, and Biology for Grades 6–12. Includes modern scientific instruments, safety equipment, practical experiment materials, and guided lab sessions under trained teachers.',
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop',
+    image: two,
   },
   {
     id: '03',
     title: 'ICT & Computer Lab',
     description: 'Modern computer lab with updated systems and internet access supporting practical computer classes, ICT training from basic to advanced levels, research projects, multimedia learning tools, and digital presentation practice.',
-    image: 'https://images.unsplash.com/photo-1563906480205-6de57492f1fb?q=80&w=1200&auto=format&fit=crop',
+    image: twelve,
   },
   {
     id: '04',
     title: 'Library & Resource Center',
     description: 'Well-managed library providing a wide collection of academic books, reference materials, storybooks, novels, newspapers, magazines, and dedicated reading space to promote independent learning and research habits.',
-    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200&auto=format&fit=crop',
+    image: sixteen,
   },
   {
     id: '05',
     title: 'Sports & Physical Education Facilities',
     description: 'Playground for football and outdoor games, basketball and volleyball courts, indoor games, athletics training, and annual sports events promoting teamwork, discipline, physical fitness, and leadership development.',
-    image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop',
+    image: fourteen,
   },
 ];
 

@@ -10,12 +10,13 @@ import CoCurricular from '@/components/section/AcademicSection/CoCurricular'
 import LearningResources from '@/components/section/AcademicSection/LearningResources'
 import AcademicResults from '@/components/section/AcademicSection/AcademicResults'
 import ClosingCTA from '@/components/common/CTA/ClosingCTA'
-
+import academicBAnner  from '../../../public/academicBAnner.jpg'
 const AcademicsPage = () => {
   return (
     <div>
         <CommonBanner
             title="Academic Excellence"
+            bgImage={academicBAnner}
             subtitle="Our academic framework is designed to build strong foundations, foster curiosity, and nurture disciplined, confident learners at every stage of growth."
             subtitle2="With Purpose"
         />

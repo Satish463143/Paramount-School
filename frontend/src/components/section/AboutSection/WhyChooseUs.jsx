@@ -1,5 +1,8 @@
 import React from 'react';
 import {  Heart, Sparkles } from 'lucide-react';
+import nine from '../../../../public/nine.jpg'
+import thirteen from '../../../../public/thirteen.jpg'
+import Moral from '../../../../public/Moral.jpg'
 
 const reasons = [
     {
@@ -12,21 +15,21 @@ const reasons = [
     {
         title: "Qualified & Dedicated Faculty",
         description: "A team of experienced and committed teachers who guide students through disciplined instruction, continuous evaluation, and academic mentorship.",
-        image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=2574&auto=format&fit=crop",
+        image: nine,
         imageAlt: "Professional teachers conducting classroom session",
         position: "right"
     },
     {
         title: "Balanced Theory & Practical Learning",
         description: "Implementation of 50% practical learning in lower grades and 75% theory structure in higher grades, supported by laboratory work and research-based assignments.",
-        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
+        image: thirteen,
         imageAlt: "Students participating in practical laboratory activity",
         position: "left"
     },
     {
         title: "Safe & Disciplined Campus Environment",
         description: "A secure campus with CCTV surveillance, controlled entry systems, and structured supervision to ensure a focused and protected learning atmosphere.",
-        image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2673&auto=format&fit=crop",
+        image: Moral,
         imageAlt: "Safe and structured school campus environment",
         position: "right"
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Users, Lightbulb, Target } from 'lucide-react';
+import Foundation from '../../../../public/Foundation.jpg'
 
 const philosophyAreas = [
     {
@@ -61,7 +62,8 @@ const Philosophy = () => {
                     <div className="order-1 lg:order-2 relative group" data-aos="fade-left" data-aos-duration="1000">
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <img 
-                                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop"
+                                src={Foundation}
+                                loading='lazy'
                                 alt="Teacher explaining concepts to engaged students in classroom"
                                 className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                             />

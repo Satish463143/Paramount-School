@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, GraduationCap, FileText, Download, CheckCircle2 } from 'lucide-react';
+import five from '../../../../public/five.jpg'
 
 const curriculumHighlights = [
     {
@@ -114,7 +115,8 @@ const Curriculum = () => {
                     <div className="relative group" data-aos="fade-left" data-aos-duration="1000">
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <img 
-                                src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2670&auto=format&fit=crop"
+                                src={five}
+                                loading='lazy'
                                 alt="Teacher guiding students through curriculum materials"
                                 className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                             />

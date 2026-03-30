@@ -3,6 +3,9 @@ import { BookOpen, Users, Compass, ArrowRight } from "lucide-react";
 import Title from "../../common/Title/Title";
 import Button from "../../common/Button/Button"
 import { Link } from "react-router-dom";
+import four from "../../../../public/four.jpg"
+import five from "../../../../public/five.jpg"
+import six from "../../../../public/six.jpg"
 
 const ACADEMIC_LEVELS = [
   {
@@ -10,8 +13,7 @@ const ACADEMIC_LEVELS = [
     subtitle: "Montessori-Based Foundation Stage",
     description:
       "The Early Childhood Development program follows a Montessori-based approach integrated with the National ECD curriculum. Learning is child-centered, activity-based, and experiential, focusing on curiosity, independence, creativity, and social development through sensory activities, storytelling, art, music, guided play, and practical life exercises.",
-    image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop",
+    image: four,
     icon: Compass,
     highlights: [
       "Language & Early Literacy Development",
@@ -26,8 +28,7 @@ const ACADEMIC_LEVELS = [
     subtitle: "Grade & Subject Teaching Model",
     description:
       "Grades 1–3 follow a Grade Teaching Model with a Continuous Evaluation System (CES) to strengthen academic foundations and teacher–student relationships. From Grades 4–8, students transition to a Subject Teaching Model with a balanced 50% theory and 50% practical approach including laboratory experiments, project-based learning, field visits, and outdoor education.",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
+    image: six,
     icon: BookOpen,
     highlights: [
       "Continuous Evaluation System (CES)",
@@ -42,8 +43,7 @@ const ACADEMIC_LEVELS = [
     subtitle: "NEB-Aligned Academic Excellence",
     description:
       "Grades 9 and 10 follow a 75% theory and 25% practical model aligned with the National Examination Board curriculum, focusing on board examination preparation and career awareness. Grades 11 and 12 offer Science and Management streams with practical lab sessions, research-based assignments, career counseling, leadership development programs, and university guidance support.",
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
+    image: five,
     icon: Users,
     highlights: [
       "75% Theory & 25% Practical Model",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, ArrowRight, Zap, GraduationCap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import cta from '../../../../public/cta.jpg'
 
 const CTA = () => {
   return (
@@ -16,7 +17,8 @@ const CTA = () => {
           <div className="lg:w-1/2 relative" data-aos="fade-right">
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700">
               <img 
-                src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop" 
+                src={cta}
+                loading='lazy' 
                 alt="Happy students at Paramount Academy" 
                 className="w-full h-[500px] md:h-[600px] object-cover"
               />

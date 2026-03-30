@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, Users, Lightbulb, Target } from 'lucide-react';
+import vision from '../../../../public/vision.jpg'
 
 const methodologyThemes = [
     {
@@ -58,7 +59,8 @@ const TeachingMethodology = () => {
                 <div className="max-w-5xl mx-auto mb-16 md:mb-24" data-aos="fade-up" data-aos-duration="1000">
                     <div className="relative group rounded-[2.5rem] overflow-hidden shadow-2xl">
                         <img 
-                            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop"
+                            src={vision}
+                            loading='lazy'
                             alt="Teacher explaining concepts to engaged students in interactive classroom"
                             className="w-full h-[400px] md:h-[500px] lg:h-[550px] object-cover transition-transform duration-700 group-hover:scale-105"
                         />

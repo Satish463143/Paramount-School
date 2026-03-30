@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, ArrowRight, Home } from 'lucide-react';
+import seven from '../../../../public/seven.jpg'
 
 const SchoolVisit = () => {
   return (
@@ -19,7 +20,8 @@ const SchoolVisit = () => {
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative rounded-[3rem] overflow-hidden aspect-[4/3] shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=1200" 
+                  src={seven}
+                  loading='lazy' 
                   alt="School Campus" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />

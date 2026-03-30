@@ -7,12 +7,14 @@ import SafetySecurity from '../../components/section/FacilitiesSection/SafetySec
 import Cleanliness from '../../components/section/FacilitiesSection/Cleanliness'
 import CampusEnvironment from '../../components/section/FacilitiesSection/CampusEnvironment'
 import ClosingCTA from '../../components/common/CTA/ClosingCTA'
+import FaFacilities from '../../../public/Facilities.jpg'
 
 const FacilitiesPage = () => {
   return (
     <div>
         <CommonBanner
         title="Facilities That Support"
+        bgImage={FaFacilities}
         subtitle2="Learning and Growth"
         subtitle="From modern classrooms to safe recreational spaces, our infrastructure ensures students learn, explore, and grow in a well-structured environment."
         />

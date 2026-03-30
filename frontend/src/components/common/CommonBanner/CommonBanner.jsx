@@ -9,7 +9,7 @@ const CommonBanner = ({ title, subtitle,subtitle2, bgImage }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={bgImage || "https://img.freepik.com/free-photo/smiling-primary-students-sitting-class_1098-3953.jpg?semt=ais_hybrid&w=740&q=80"} 
+          src={bgImage} 
           alt={title} 
           className="w-full h-full object-cover"
         />

@@ -1,13 +1,16 @@
 import { GraduationCap, Users, BookOpen } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import four from '../../../../public/four.jpg'
+import five from '../../../../public/five.jpg'
+import seven from '../../../../public/seven.jpg'
 
 const academicLevels = [
     {
         title: "Early Childhood Development",
         grades: "Nursery to Senior Montessori",
         description: "Montessori-based education integrated with the national ECD curriculum, focusing on curiosity, independence, creativity, and activity-based experiential learning.",
-        image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2670&auto=format&fit=crop",
+        image: four,
         imageAlt: "Students engaged in Montessori-based learning activities",
         icon: <Users size={24} />
     },
@@ -15,7 +18,7 @@ const academicLevels = [
         title: "Primary & Lower Secondary Education",
         grades: "Grade 1 to Grade 8",
         description: "Grade Teaching Model (Grade 1–3) with Continuous Evaluation System, followed by Subject Teaching Model (Grade 4–8) using a balanced 50% theory and 50% practical approach including projects, laboratory work, and outdoor learning.",
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop",
+        image: five,
         imageAlt: "Students actively learning in structured classroom environment",
         icon: <BookOpen size={24} />
     },
@@ -23,7 +26,7 @@ const academicLevels = [
         title: "Secondary & Higher Secondary Education",
         grades: "Grade 9 to Grade 12",
         description: "NEB-aligned curriculum with 75% theory and 25% practical learning. Includes Science and Management streams in Grades 11–12, supported by laboratory sessions, research work, career counseling, and exam preparation.",
-        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
+        image: seven,
         imageAlt: "Students engaged in focused academic learning",
         icon: <GraduationCap size={24} />
     }

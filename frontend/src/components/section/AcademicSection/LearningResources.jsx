@@ -1,32 +1,36 @@
 import React from 'react';
 import { Layout, Beaker, Library, Laptop } from 'lucide-react';
+import Excellence from '../../../../public/Excellence.jpg'
+import Laboratory from '../../../../public/Laboratory.jpg'
+import one from '../../../../public/one.jpg'
+import Outdoor from '../../../../public/three.jpg'
 
 const resources = [
   {
     title: "Safe & Structured Learning Environment",
     description: "Classrooms operate within a supervised and disciplined campus supported by controlled entry systems and CCTV surveillance to ensure a focused academic atmosphere.",
-    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2673&auto=format&fit=crop",
+    image: Excellence,
     icon: <Layout size={24} />,
     tag: "ENVIRONMENT"
   },
   {
     title: "Science & ICT Laboratories",
     description: "Fully equipped science laboratories for Physics, Chemistry, and Biology, along with an ICT & Computer Lab supporting practical training, internet access, and multimedia learning.",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2572&auto=format&fit=crop",
+    image: Laboratory,
     icon: <Beaker size={24} />,
     tag: "EXPLORE"
   },
   {
     title: "Library & Resource Center",
     description: "A well-managed library providing academic books, reference materials, newspapers, magazines, and dedicated reading space for independent study and research.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2670&auto=format&fit=crop",
+    image: one,
     icon: <Library size={24} />,
     tag: "KNOWLEDGE"
   },
   {
     title: "Outdoor & Co-Curricular Facilities",
     description: "Outdoor learning spaces, sports grounds, music and art facilities, and event areas support experiential learning and holistic student development.",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2574&auto=format&fit=crop",
+    image: Outdoor,
     icon: <Laptop size={24} />,
     tag: "DEVELOPMENT"
   }

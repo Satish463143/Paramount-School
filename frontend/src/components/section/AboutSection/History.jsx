@@ -1,13 +1,20 @@
 import React from 'react';
-import { Flag, Building, Globe, Trophy, Rocket, GraduationCap, Calendar, ArrowRight } from 'lucide-react';
+import { Flag, Building, Globe, Rocket, GraduationCap, Calendar, ArrowRight } from 'lucide-react';
 import Title from '@/components/common/Title/Title';
+import Foundation from '../../../../public/Foundation.jpg'
+import Laboratory from '../../../../public/Laboratory.jpg'
+import Structure from '../../../../public/Structure.jpg'
+import Practical from '../../../../public/Practical.jpg'
+import nine from '../../../../public/nine.jpg'
+
+
 
 const milestones = [
     {
         year: "2004",
         title: "Foundation of Academic Vision",
         desc: "Paramount Academy was established with a commitment to provide quality education through disciplined learning and holistic development.",
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop",
+        image: Foundation,
         icon: <Flag className="text-white" size={20} />,
         color: "from-blue-500 to-cyan-400"
     },
@@ -15,7 +22,7 @@ const milestones = [
         year: "2008",
         title: "Structured Academic Framework",
         desc: "Programs from Nursery to Grade Twelve were structured under the National Examination Board with balanced theory and practical integration.",
-        image: "https://images.unsplash.com/photo-1577896333050-71eec81640a2?q=80&w=2574&auto=format&fit=crop",
+        image: Structure,
         icon: <Building className="text-white" size={20} />,
         color: "from-purple-500 to-pink-500"
     },
@@ -23,7 +30,7 @@ const milestones = [
         year: "2013",
         title: "Laboratory & ICT Integration",
         desc: "Science laboratories and ICT facilities were strengthened to support practical learning, research assignments, and experiential education.",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2586&auto=format&fit=crop",
+        image: Laboratory,
         icon: <GraduationCap className="text-white" size={20} />,
         color: "from-orange-500 to-red-500"
     },
@@ -31,7 +38,7 @@ const milestones = [
         year: "2019",
         title: "Theory & Practical Model",
         desc: "Implementation of the 50% practical model for lower grades and 75% theory model for secondary levels aligned with NEB guidelines.",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop",
+        image: Practical,
         icon: <Globe className="text-white" size={20} />,
         color: "from-emerald-500 to-teal-400"
     },
@@ -39,7 +46,7 @@ const milestones = [
         year: "Present",
         title: "Holistic Institutional Development",
         desc: "Today, Paramount Academy continues to focus on academic excellence, discipline, leadership, and overall student development in a secure and structured environment.",
-        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
+        image: nine,
         icon: <Rocket className="text-white" size={20} />,
         color: "from-indigo-500 to-blue-500"
     }

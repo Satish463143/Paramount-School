@@ -1,5 +1,6 @@
 import React from 'react';
 import { Quote, Feather } from 'lucide-react';
+import principal from '../../../../public/principal.jpg'
 
 const Message = () => {
     return (
@@ -24,7 +25,8 @@ const Message = () => {
                                 {/* Image Container */}
                                 <div className="absolute inset-2 overflow-hidden rounded-[50%_50%_50%_50%/50%_50%_50%_50%] border-4 border-white dark:border-gray-800 shadow-xl">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop" 
+                                        src={principal}
+                                        loading='lazy'
                                         alt="Principal Mrs. Sarah Johnson" 
                                         className="w-full h-full object-cover"
                                     />

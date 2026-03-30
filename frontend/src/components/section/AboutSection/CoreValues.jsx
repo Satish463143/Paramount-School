@@ -1,13 +1,18 @@
 import React from 'react';
 import { Shield, Heart, Lightbulb, Users, Award, BookOpen, Sparkles, Star } from 'lucide-react';
 import Title from '@/components/common/Title/Title';
+import Excellence from '../../../../public/Excellence.jpg'
+import Discipline from '../../../../public/Discipline.jpg'
+import Holistic from '../../../../public/Holistic.jpg'
+import Leadership from '../../../../public/Leadership.jpg'
+import Moral from '../../../../public/Moral.jpg'
 
 const values = [
     {
         title: "Academic Excellence",
         desc: "Commitment to high academic standards through disciplined study, structured evaluation, and nationally aligned curriculum.",
         icon: <Award size={28} />,
-        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop",
+        image: Excellence,
         color: "from-purple-400 to-violet-300",
         bgColor: "bg-purple-100 dark:bg-purple-900/30",
         accentColor: "bg-purple-400"
@@ -16,7 +21,7 @@ const values = [
         title: "Discipline & Responsibility",
         desc: "A structured learning environment that fosters accountability, self-control, and respect for institutional values.",
         icon: <Shield size={28} />,
-        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop",
+        image: Discipline,
         color: "from-blue-400 to-cyan-300",
         bgColor: "bg-blue-100 dark:bg-blue-900/30",
         accentColor: "bg-blue-400"
@@ -25,7 +30,7 @@ const values = [
         title: "Holistic Development",
         desc: "Balanced emphasis on intellectual, social, emotional, moral, and physical growth to prepare responsible citizens.",
         icon: <Users size={28} />,
-        image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2669&auto=format&fit=crop",
+        image: Holistic,
         color: "from-green-400 to-emerald-300",
         bgColor: "bg-green-100 dark:bg-green-900/30",
         accentColor: "bg-green-400"
@@ -34,7 +39,7 @@ const values = [
         title: "Leadership & Confidence",
         desc: "Encouraging initiative, teamwork, and decision-making skills that prepare students for future responsibilities.",
         icon: <Lightbulb size={28} />,
-        image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2586&auto=format&fit=crop",
+        image: Leadership,
         color: "from-yellow-400 to-orange-300",
         bgColor: "bg-yellow-100 dark:bg-yellow-900/30",
         accentColor: "bg-yellow-400"
@@ -43,7 +48,7 @@ const values = [
         title: "Moral & Ethical Values",
         desc: "Strong emphasis on integrity, respect, and social responsibility as foundations of character development.",
         icon: <Heart size={28} />,
-        image: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?q=80&w=2574&auto=format&fit=crop",
+        image: Moral,
         color: "from-pink-400 to-rose-300",
         bgColor: "bg-pink-100 dark:bg-pink-900/30",
         accentColor: "bg-pink-400"

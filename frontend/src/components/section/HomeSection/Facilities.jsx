@@ -2,6 +2,9 @@ import React from "react";
 import Title from "../../common/Title/Title";
 import Button from "../../common/Button/Button";
 import { Link } from "react-router-dom";
+import sixteen from "../../../../public/sixteen.jpg"
+import two from "../../../../public/two.jpg"
+import tweleve from "../../../../public/twelve.jpg"
 import { 
   Beaker, 
   Book, 
@@ -14,7 +17,7 @@ const FACILITIES_DATA = [
     name: "Modern Science Laboratory",
     description:
       "Fully equipped laboratory supporting practical learning in Physics, Chemistry, and Biology for Grades 6–12. Includes modern scientific instruments, laboratory safety equipment, practical experiment materials, and guided lab sessions under trained teachers.",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
+    image: two,
     icon: Beaker,
     delay: 100
   },
@@ -22,7 +25,7 @@ const FACILITIES_DATA = [
     name: "Library & Resource Center",
     description:
       "A well-managed library providing a quiet, resource-rich environment with a wide collection of academic books, reference materials, storybooks, novels, newspapers, magazines, and dedicated reading space to promote independent learning.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop",
+    image: sixteen,
     icon: Book,
     delay: 300
   },
@@ -30,7 +33,7 @@ const FACILITIES_DATA = [
     name: "ICT & Computer Lab",
     description:
       "Modern computer lab equipped with updated systems and internet access. Supports practical computer classes, basic to advanced ICT training, multimedia learning tools, research projects, and digital presentation practice.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2670&auto=format&fit=crop",
+    image: tweleve,
     icon: Laptop,
     delay: 400
   },

@@ -1,30 +1,36 @@
 import React from 'react';
+import result from '../../../../public/Results.jpg'
+import ten from '../../../../public/ten.jpg'
+import firstaid from '../../../../public/firstaidjpg.jpg'
+import Holistic from '../../../../public/Holistic.jpg'
+import seven from '../../../../public/seven.jpg'
+
 
 const safetyMeasures = [
   {
     title: 'CCTV Surveillance',
     description: 'Campus monitored through CCTV surveillance to maintain safety, discipline, and a secure academic environment.',
-    image: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop',
+    image: result,
   },
   {
     title: 'Controlled Entry System',
     description: 'Boundary walls and controlled entry ensure regulated access and a safe learning atmosphere.',
-    image: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop',
+    image: result,
   },
   {
     title: 'Supervised & Disciplined Campus',
     description: 'Structured discipline and monitoring systems provide a peaceful, supervised environment for students.',
-    image: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop',
+    image: ten,
   },
   {
     title: 'Health & First Aid Support',
     description: 'Basic first aid facility and emergency response support available to ensure student well-being.',
-    image: 'https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?q=80&w=800&auto=format&fit=crop',
+    image: firstaid,
   },
   {
     title: 'Hygiene & Sanitation',
     description: 'Clean drinking water and proper sanitation facilities maintained to ensure a healthy campus environment.',
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop',
+    image: Holistic,
   },
 ];
 
@@ -38,7 +44,7 @@ const SafetySecurity = () => {
           data-aos="zoom-in"
         >
           <img 
-            src="https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=1200&auto=format&fit=crop" 
+            src={seven} 
             alt="Safety and Security Hero" 
             className="w-full h-[300px] md:h-[450px] object-cover transition-transform duration-1000 group-hover:scale-105"
           />
@@ -81,7 +87,7 @@ const SafetySecurity = () => {
                 </div>
                 <div className="overflow-hidden rounded-2xl h-64 mt-4 shadow-inner">
                   <img 
-                    src="https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?q=80&w=800&auto=format&fit=crop" 
+                    src={seven}
                     alt="Campus Security" 
                     className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700" 
                   />

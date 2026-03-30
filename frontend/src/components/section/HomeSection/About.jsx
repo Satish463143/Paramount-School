@@ -1,5 +1,5 @@
 import { Target, Eye, Heart, CheckCircle } from "lucide-react";
-import school from "../../../assets/school.jpg"
+import one from "../../../../public/one.jpg"
 const About = () => {
   const values = [
   { icon: Target, label: "Quality Education through Learning & Doing" },
@@ -23,7 +23,8 @@ const About = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img 
-                src={school} 
+                src={one} 
+                loading="lazy"
                 alt="Paramount Academy Campus" 
                 className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-110"
               />

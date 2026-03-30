@@ -1,28 +1,32 @@
 import React from 'react';
+import two from '../../../../public/sports.jpg'
+import twelve from '../../../../public/four.jpg'
+import cta from '../../../../public/cta.jpg'
+import fourteen from '../../../../public/fourteen.jpg'
 
 const sportsAreas = [
   {
     title: 'Outdoor Playground',
     description: 'Spacious playground for football and various outdoor games that promote teamwork, discipline, and physical strength.',
-    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
+    image: two,
     tag: 'Outdoor Sports',
   },
   {
     title: 'Basketball & Volleyball Courts',
     description: 'Dedicated courts for basketball and volleyball encouraging structured training, coordination, and team spirit.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
+    image: fourteen,
     tag: 'Team Games',
   },
   {
     title: 'Indoor Games & Athletics',
     description: 'Facilities for indoor games such as chess and table tennis along with athletics training programs for overall fitness development.',
-    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
+    image: twelve,
     tag: 'Skill Development',
   },
   {
     title: 'Physical Training & Competitions',
     description: 'Regular physical training sessions, annual sports events, and inter-school competitions to build sportsmanship and leadership qualities.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
+    image: cta,
     tag: 'Leadership & Fitness',
   },
 ];
@@ -38,7 +42,7 @@ const PhysicalFacilities = () => {
         <div className="relative group mb-24" data-aos="fade-up">
           <div className="overflow-hidden rounded-[3rem] shadow-2xl relative border border-slate-100 dark:border-slate-800">
             <img 
-              src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600&auto=format&fit=crop" 
+              src={two} 
               alt="Panoramic Sports Field" 
               className="w-full h-[350px] md:h-[650px] object-cover transition-transform duration-1000 group-hover:scale-105"
             />

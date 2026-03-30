@@ -1,12 +1,18 @@
 import React from 'react';
 import { Building2, FlaskConical, BookOpen, Dumbbell, Shield, Bus, Sparkles, Star, Heart } from 'lucide-react';
 import Title from '@/components/common/Title/Title';
+import seven from '../../../../public/seven.jpg'
+import two from '../../../../public/two.jpg'
+import twelve from '../../../../public/twelve.jpg'
+import one from '../../../../public/one.jpg'
+import three from '../../../../public/three.jpg'
+import Structure from '../../../../public/Structure.jpg'
 
 const facilities = [
     {
         title: "Safe & Structured Campus",
         description: "A disciplined learning environment supported by CCTV surveillance and controlled entry systems to ensure student safety.",
-        image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2532&auto=format&fit=crop",
+        image: seven,
         icon: <Shield size={32} />,
         color: "from-red-400 to-pink-300",
         bgColor: "bg-red-50 dark:bg-red-900/20"
@@ -14,7 +20,7 @@ const facilities = [
     {
         title: "Science Laboratories",
         description: "Well-equipped Physics, Chemistry, and Biology laboratories that promote practical experiments and research-based learning.",
-        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2670&auto=format&fit=crop",
+        image: two,
         icon: <FlaskConical size={32} />,
         color: "from-purple-400 to-violet-300",
         bgColor: "bg-purple-50 dark:bg-purple-900/20"
@@ -22,7 +28,7 @@ const facilities = [
     {
         title: "ICT & Computer Lab",
         description: "Modern computer facilities providing practical ICT training, internet access, and multimedia-supported learning.",
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+        image: twelve,
         icon: <Building2 size={32} />,
         color: "from-blue-400 to-cyan-300",
         bgColor: "bg-blue-50 dark:bg-blue-900/20"
@@ -30,7 +36,7 @@ const facilities = [
     {
         title: "Library & Resource Center",
         description: "A dedicated academic space offering books, reference materials, newspapers, and magazines to support independent study.",
-        image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2670&auto=format&fit=crop",
+        image: one,
         icon: <BookOpen size={32} />,
         color: "from-amber-400 to-orange-300",
         bgColor: "bg-amber-50 dark:bg-amber-900/20"
@@ -38,7 +44,7 @@ const facilities = [
     {
         title: "Sports & Co-Curricular Facilities",
         description: "Outdoor learning spaces, sports grounds, music and art activities, and event areas that support holistic student development.",
-        image: "https://images.unsplash.com/photo-1519766304817-4f37bda74a26?q=80&w=2670&auto=format&fit=crop",
+        image: three,
         icon: <Dumbbell size={32} />,
         color: "from-green-400 to-emerald-300",
         bgColor: "bg-green-50 dark:bg-green-900/20"
@@ -46,7 +52,7 @@ const facilities = [
     {
         title: "Auditorium & Activity Hall",
         description: "A dedicated space for assemblies, cultural programs, academic presentations, and institutional events.",
-        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop",
+        image: Structure,
         icon: <Building2 size={32} />,
         color: "from-indigo-400 to-blue-300",
         bgColor: "bg-indigo-50 dark:bg-indigo-900/20"
@@ -94,6 +100,7 @@ const Infrastructure = () => {
                                     <img 
                                         src={facility.image}
                                         alt={facility.title}
+                                        loading='lazy'
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     

@@ -9,20 +9,21 @@ import Infrastructure from '@/components/section/AboutSection/Infrastructure'
 import WhyChooseUs from '@/components/section/AboutSection/WhyChooseUs'
 import ClosingCTA from '@/components/common/CTA/ClosingCTA'
 import React from 'react'
+import about from '../../../public/about.jpg'
 
 const AboutPage = () => {
   return (
     <div>
-        <CommonBanner title="About " subtitle2="The School" subtitle="Our School is a place where students come to learn and grow. We offer a wide range of programs and activities to help students develop their full potential."/>
+        <CommonBanner title="About " bgImage={about} subtitle2="The School" subtitle="Our School is a place where students come to learn and grow. We offer a wide range of programs and activities to help students develop their full potential."/>
         <AboutSchool/>
-         <VisionAndMission/>
-         <Message/>
-         <History/>
-         <CoreValues/>
-         <FacultyOverview/>
-         <Infrastructure/>
-         <WhyChooseUs/>         
-         <ClosingCTA/>       
+        <VisionAndMission/>
+        <Message/>
+        <History/>
+        <CoreValues/>
+        <FacultyOverview/>
+        <Infrastructure/>
+        <WhyChooseUs/>         
+        <ClosingCTA/>       
     </div>
   )
 }

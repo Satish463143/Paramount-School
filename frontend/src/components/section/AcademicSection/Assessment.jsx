@@ -1,5 +1,6 @@
 import React from 'react';
 import { ClipboardCheck, Eye, TrendingUp, MessageSquare } from 'lucide-react';
+import Structure from '../../../../public/Structure.jpg'
 
 const assessmentAspects = [
     {
@@ -62,7 +63,8 @@ const Assessment = () => {
                     <div className="relative group order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <img 
-                                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop"
+                                src={Structure}
+                                loading='lazy'
                                 alt="Teacher providing supportive feedback to student"
                                 className="w-full h-[400px] md:h-[500px] lg:h-[550px] object-cover transition-transform duration-700 group-hover:scale-105"
                             />

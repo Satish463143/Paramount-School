@@ -4,12 +4,14 @@ import React from 'react'
 import UpcomingEvents from '@/components/section/EventsAndNoticeSection/UpcomingEvents'
 import LatestNotices from '@/components/section/EventsAndNoticeSection/LatestNotices'
 import EventsGallery from '@/components/section/EventsAndNoticeSection/EventsGallery'
+import eventsBanner from '../../../public/eventsBanner.jpg'
 
 const EventsAndNoticePage = () => {
   return (
     <div>
         <CommonBanner
             title="School Updates &"
+            bgImage={eventsBanner}
             subtitle="Explore important notices, scheduled programs, and student activities that keep our campus active and connected."
             subtitle2="Activities"
         />

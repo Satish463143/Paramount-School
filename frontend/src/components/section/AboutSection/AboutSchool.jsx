@@ -1,5 +1,6 @@
 import React from 'react';
-import { Sparkles, Quote, BookOpen, Users, ArrowRight } from 'lucide-react';
+import {  Quote, BookOpen, Users, ArrowRight } from 'lucide-react';
+import evelven from '../../../../public/eleven.jpg'
 
 const AboutSchool = () => {
     return (
@@ -16,7 +17,8 @@ const AboutSchool = () => {
                         {/* Main Image */}
                         <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                             <img
-                                src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop"
+                                src={evelven}
+                                loading='lazy'
                                 alt="Engaged students in a modern learning environment"
                                 className="w-full h-[500px] lg:h-[600px] object-cover"
                             />
@@ -108,13 +110,13 @@ const AboutSchool = () => {
                             </button>
                             
                             <div className="flex items-center gap-4">
-                                <div className="flex -space-x-3">
+                                {/* <div className="flex -space-x-3">
                                     {[1, 2, 3].map((i) => (
                                         <div key={i} className={`h-10 w-10 rounded-full border-2 border-background bg-gray-200 overflow-hidden`}>
                                             <img src={`https://i.pravatar.cc/100?img=${10+i}`} alt="Avatar" className="h-full w-full object-cover" />
                                         </div>
                                     ))}
-                                </div>
+                                </div> */}
                                 <div className="text-sm">
                                     <p className="font-bold text-foreground">NEB Affiliated Institution</p>
                                     <p className="text-xs text-muted-foreground">Located in Tokha-8, Gongabu Baniyatar</p>

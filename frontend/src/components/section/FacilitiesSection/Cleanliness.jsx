@@ -1,5 +1,7 @@
 import React from 'react';
 import Title from '@/components/common/Title/Title';
+import Moral from '../../../../public/Moral.jpg'
+
 
 const maintenancePillars = [
   {
@@ -56,7 +58,7 @@ const Cleanliness = () => {
             <div className="relative group">
               <div className="overflow-hidden rounded-[2.5rem] shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-3 bg-slate-50/50 dark:bg-slate-900/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=1200&auto=format&fit=crop" 
+                  src={Moral} 
                   alt="Bright Organized Corridor" 
                   className="w-full h-[400px] md:h-[600px] object-cover rounded-[2rem] transition-transform duration-1000 group-hover:scale-[1.02]"
                 />

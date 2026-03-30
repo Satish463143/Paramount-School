@@ -1,6 +1,7 @@
 import React from 'react';
 import { Compass, Target, Heart, Star, Sun, ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import vision from '../../../../public/vision.jpg'
 
 const VisionAndMission = () => {
     return (
@@ -24,7 +25,8 @@ const VisionAndMission = () => {
                         <div className="relative z-10">
                             <div className="relative rounded-[3rem] rounded-tl-[8rem] rounded-br-[6rem] overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 transform rotate-[-2deg] hover:rotate-0 transition-all duration-500">
                                 <img 
-                                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2604&auto=format&fit=crop" 
+                                    src={vision}
+                                    loading='lazy'
                                     alt="Happy students learning together" 
                                     className="w-full h-[500px] object-cover hover:scale-110 transition-transform duration-700"
                                 />

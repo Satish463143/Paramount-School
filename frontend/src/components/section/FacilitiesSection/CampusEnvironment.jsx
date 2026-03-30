@@ -1,20 +1,23 @@
 import React from 'react';
-
+import two from '../../../../public/sports.jpg'
+import twelve from '../../../../public/four.jpg'
+import cta from '../../../../public/cta.jpg'
+import fourteen from '../../../../public/fourteen.jpg'
 const environmentBlocks = [
   {
     title: 'Peaceful & Education-Friendly Location',
     description: 'Located in Ward No. 8, Tokha Municipality, Gongabu Baniyatar, the school provides a peaceful, safe, and education-friendly environment with strong community connection.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
+    image: two,
   },
   {
     title: 'Outdoor Learning Environment',
     description: 'Learning extends beyond classrooms through educational field visits, environmental observation projects, community-based learning, gardening activities, and open-space group discussions.',
-    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
+    image: twelve,
   },
   {
     title: 'Safe & Hygienic Campus',
     description: 'The campus maintains boundary walls, controlled entry, CCTV surveillance, supervision systems, clean drinking water, sanitation facilities, and structured discipline to ensure a secure and healthy learning atmosphere.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop',
+    image: cta,
   },
 ];
 

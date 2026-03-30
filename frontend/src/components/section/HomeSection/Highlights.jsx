@@ -1,5 +1,6 @@
 import React from "react";
 import { UserCheck, ShieldCheck, GraduationCap, School, Sparkles, CheckCircle2 } from "lucide-react";
+import twweleve from "../../../../public/twweleve.jpg"
 
 const HIGHLIGHT_ITEMS = [
   {
@@ -71,7 +72,8 @@ const Highlights = () => {
             {/* High Impact Image Card */}
             <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
               <img 
-                src="https://images.unsplash.com/photo-1571210862729-78a52d3779a2?q=80&w=2070&auto=format&fit=crop" 
+                src={twweleve} 
+                loading="lazy"
                 alt="Happy Students" 
                 className="w-full h-[400px] object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               />
